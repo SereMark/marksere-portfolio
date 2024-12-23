@@ -1,6 +1,8 @@
-MIT License
+# License for marksere.com Portfolio Project
 
-Copyright (c) 2024 Sere Gergő Márk
+## Code License (MIT)
+
+Copyright (c) [2025] Sere Gergő Márk
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -15,7 +17,32 @@ copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## Creative Assets License (CC BY-NC 4.0)
+
+This project includes creative assets, such as website designs, graphics, animations, and other visual or interactive elements (the "Creative Assets"). These assets are licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
+
+### You are free to:
+- **Share**: Copy and redistribute the material in any medium or format.
+- **Adapt**: Remix, transform, and build upon the material.
+
+### Under the following terms:
+1. **Attribution**: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+2. **NonCommercial**: You may not use the material for commercial purposes.
+
+For the full license text, visit: [https://creativecommons.org/licenses/by-nc/4.0/legalcode](https://creativecommons.org/licenses/by-nc/4.0/legalcode).
+
+---
+
+## Additional Notes
+
+1. This dual license applies to this project as follows:
+   - The **MIT License** applies to all source code files in this repository.
+   - The **CC BY-NC 4.0 License** applies to all creative assets in this repository (e.g., images, animations, design files).
+2. If you wish to use the creative assets for commercial purposes, please contact Sere Gergő Márk at [your email address].
