@@ -36,7 +36,7 @@ Welcome to the repository for **marksere.com**, a modern, sleek, and professiona
 - **Framer Motion**: Smooth animations and page transitions.
 - **GSAP (GreenSock Animation Platform)**: Advanced animations and scroll-triggered effects.
 - **Locomotive Scroll**: Smooth scrolling with parallax effects.
-- **Three.js** *(optional)*: Interactive 3D graphics.
+- **Three.js**: Interactive 3D graphics.
 
 ### **Hosting**
 - **Netlify**: Continuous deployment, global CDN delivery, and automatic HTTPS.
