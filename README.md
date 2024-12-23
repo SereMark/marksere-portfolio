@@ -10,8 +10,6 @@ Welcome to the repository for **marksere.com**, a modern, sleek, and professiona
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Setup and Installation](#setup-and-installation)
-- [Development Workflow](#development-workflow)
-- [Deployment](#deployment)
 - [License](#license)
 - [Contact](#contact)
 
@@ -94,45 +92,6 @@ marksere.com/
    ```bash
    yarn install
    ```
-
----
-
-## **Development Workflow**
-
-### **Start Development Server**
-Start the local development server:
-```bash
-npm run dev
-```
-Visit `http://localhost:3000` in your browser to view the project.
-
-### **Build for Production**
-To create an optimized production build:
-```bash
-npm run build
-```
-The output will be generated in the `dist/` folder.
-
-### **Linting and Formatting**
-Run linting:
-```bash
-npm run lint
-```
-Format code:
-```bash
-npm run format
-```
-
----
-
-## **Deployment**
-
-The site is automatically deployed to **Netlify** via continuous deployment from the `main` branch. To manually deploy:
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-2. Deploy the `dist/` folder to Netlify.
 
 ---
 
