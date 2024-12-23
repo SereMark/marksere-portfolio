@@ -83,7 +83,7 @@ marksere.com/
 ### **Installation**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/marksere.com.git
+   git clone https://github.com/SereMark/marksere.com.git
    cd marksere.com
    ```
 2. Install dependencies:
@@ -139,10 +139,10 @@ The site is automatically deployed to **Netlify** via continuous deployment from
 ## **License**
 
 This project is dual-licensed:
-- **Code**: [MIT License](./LICENSE)
-- **Creative Assets**: Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+- **Code**: MIT License. See [LICENSE](./LICENSE) for details.
+- **Creative Assets and Personal Content**: Strictly All Rights Reserved. This includes any CVs, professional photos, animations, designs, or personal data in this repository. Unauthorized use is prohibited.
 
-For more details, refer to the [LICENSE](./LICENSE) file.
+If you have questions about permitted use or wish to request special permissions, contact **Sere Gergő Márk** at [seremark056@gmail.com](mailto:seremark056@gmail.com).
 
 ---
 
