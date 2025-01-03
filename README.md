@@ -4,19 +4,6 @@ A modern, minimalistic, and performance-focused portfolio website showcasing exp
 
 ---
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Project Structure](#project-structure)
-5. [Setup and Installation](#setup-and-installation)
-6. [Design Philosophy](#design-philosophy)
-7. [Roadmap and Future Plans](#roadmap-and-future-plans)
-8. [License](#license)
-9. [Contact](#contact)
-
----
-
 ## 1. Overview
 marksere.com is designed to demonstrate advanced technical skills and creativity through an immersive user interface, optimized performance, and interactive elements.
 
