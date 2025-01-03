@@ -1,84 +1,101 @@
-# marksere.com - Professional Portfolio
+# marksere.com – Professional AI & Robotics Portfolio
 
-Welcome to the repository for **marksere.com**, a modern, sleek, and professional portfolio website to showcase expertise in AI, robotics, and software development. Designed for scalability, performance, and a premium user experience, this portfolio emphasizes minimalistic aesthetics, smooth animations, and interactivity.
-
----
-
-## **Table of Contents**
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Setup and Installation](#setup-and-installation)
-- [License](#license)
-- [Contact](#contact)
+A modern, minimalistic, and performance-focused portfolio website showcasing expertise in AI, robotics, and software development.
 
 ---
 
-## **Features**
-
-- **Hero Section**: Full-screen landing page with animated intro text, a parallax background, and a clear call-to-action.
-- **Interactive Project Showcase**: Filterable grid layout, hover effects, and detailed project modals with live demo and GitHub links.
-- **Scroll-Triggered Animations**: Smooth fade-ins, zoom effects, and parallax scrolling powered by GSAP and Framer Motion.
-- **Dynamic Cursor**: Custom animated cursor for a modern touch.
-- **Dark Mode**: Light/dark theme toggle with smooth transitions and user preference persistence.
-- **Contact Section**: Minimalistic form with Netlify Forms integration and direct links to GitHub, LinkedIn, and email.
-- **Performance Optimizations**: Lazy loading, WebP images, tree shaking, and responsive design.
-
----
-
-## **Technologies Used**
-
-### **Frontend**
-- **React.js**: Component-based UI development.
-- **Vite**: Fast development build tool with static site generation.
-- **Tailwind CSS**: Utility-first CSS framework for responsive design.
-- **Framer Motion**: Smooth animations and page transitions.
-- **GSAP (GreenSock Animation Platform)**: Advanced animations and scroll-triggered effects.
-- **Locomotive Scroll**: Smooth scrolling with parallax effects.
-- **Three.js**: Interactive 3D graphics.
-
-### **Hosting**
-- **Netlify**: Continuous deployment, global CDN delivery, and automatic HTTPS.
-
-### **Design**
-- **Google Fonts**: Clean, professional typography.
-- **Feather Icons**: Lightweight, modern icons.
-
-### **Optimization**
-- Lazy loading, WebP image formats, tree shaking, and responsive utilities.
+## Table of Contents
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Project Structure](#project-structure)
+5. [Setup and Installation](#setup-and-installation)
+6. [Design Philosophy](#design-philosophy)
+7. [Roadmap and Future Plans](#roadmap-and-future-plans)
+8. [License](#license)
+9. [Contact](#contact)
 
 ---
 
-## **Project Structure**
+## 1. Overview
+marksere.com is designed to demonstrate advanced technical skills and creativity through an immersive user interface, optimized performance, and interactive elements.
 
+---
+
+## 2. Features
+- **Hero Section**  
+  Full-screen landing page with animated intro text, parallax effects, and a prominent call-to-action.
+
+- **Project Showcase**  
+  Filterable grid layout, hover effects, and modals with live demos, GitHub links, and detailed project overviews.
+
+- **Scroll-Triggered Animations**  
+  Smooth fade-ins, zoom effects, and parallax scrolling powered by GSAP and Framer Motion.
+
+- **Dynamic Cursor**  
+  Custom animated cursor for a modern, interactive feel.
+
+- **Dark Mode**  
+  Toggle between light and dark themes with user preference retention.
+
+- **Contact Form**  
+  Minimalistic form integrated with Netlify Forms, plus direct links to external profiles.
+
+- **Performance Optimizations**  
+  Lazy loading, WebP images, tree shaking, and responsive design for optimal speed and usability.
+
+---
+
+## 3. Technologies Used
+
+### Frontend
+- **React.js**: Component-based UI structure.
+- **Vite**: Fast development tool with static site generation.
+- **Tailwind CSS**: Utility-first CSS framework for rapid, responsive design.
+- **Framer Motion** & **GSAP**: Advanced animations and scroll-triggered effects.
+- **Locomotive Scroll**: Smooth scrolling and parallax functionality.
+- **Three.js**: 3D graphics and interactive elements.
+
+### Hosting & Deployment
+- **Netlify**: Continuous integration, CDN delivery, and automatic HTTPS.
+
+### Design
+- **Google Fonts**: Professional typography.
+- **Feather Icons**: Lightweight, modern icon set.
+
+### Optimization
+- Lazy loading, WebP images, tree shaking, and responsive utilities.
+
+---
+
+## 4. Project Structure
 ```
 marksere.com/
-├── public/                 # Static assets (images, favicon, etc.)
-├── src/                    # Main source code
-│   ├── components/         # Reusable React components
-│   ├── pages/              # Page components
-│   ├── styles/             # Tailwind and SCSS styles
-│   ├── animations/         # Framer Motion and GSAP animation configurations
-│   └── utils/              # Helper functions and configurations
-├── .gitignore              # Ignored files and directories
-├── tailwind.config.js      # Tailwind CSS configuration
-├── vite.config.js          # Vite build configuration
-├── package.json            # Project metadata and dependencies
-├── LICENSE                 # Licensing information
-└── README.md               # Project documentation
+├── public/                
+├── src/                   
+│   ├── components/        
+│   ├── pages/             
+│   ├── styles/            
+│   ├── animations/        
+│   └── utils/             
+├── .gitignore             
+├── tailwind.config.js     
+├── vite.config.js         
+├── package.json           
+├── LICENSE                
+└── README.md
 ```
 
 ---
 
-## **Setup and Installation**
+## 5. Setup and Installation
 
-### **Prerequisites**
-- Node.js (version 16 or higher)
+### Prerequisites
+- Node.js (v16 or higher)
 - npm or yarn
 - Git
 
-### **Installation**
+### Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/SereMark/marksere.com.git
@@ -92,25 +109,46 @@ marksere.com/
    ```bash
    yarn install
    ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. For a production build:
+   ```bash
+   npm run build
+   ```
 
 ---
 
-## **License**
+## 6. Design Philosophy
+- **Minimalistic Aesthetics**: Clean interface with carefully chosen typography.
+- **High Interactivity**: Animations, 3D elements, and dynamic components.
+- **Content First**: Projects, research, and professional highlights take center stage.
+- **User-Centric**: Clear navigation, accessible design, and consistent layout.
 
+---
+
+## 7. Roadmap and Future Plans
+- **Analytics**: Integrate Google Analytics or Plausible.
+- **SEO Enhancements**: Structured data, meta tags, and improved load times.
+- **Blog Section**: Technical articles, tutorials, and industry insights.
+- **Expanded 3D Features**: Enhanced Three.js elements for deeper interactivity.
+- **Testing & QA**: Unit tests, integration tests, and automated UI testing.
+
+---
+
+## 8. License
 This project is dual-licensed:
-- **Code**: MIT License. See [LICENSE](./LICENSE) for details.
-- **Creative Assets and Personal Content**: Strictly All Rights Reserved. This includes any CVs, professional photos, animations, designs, or personal data in this repository. Unauthorized use is prohibited.
+- **Code**: MIT License. See [LICENSE](./LICENSE).
+- **Creative Assets and Personal Content**: All Rights Reserved (includes CVs, photos, animations, designs, and personal data).
 
-If you have questions about permitted use or wish to request special permissions, contact **Sere Gergő Márk** at [seremark056@gmail.com](mailto:seremark056@gmail.com).
+For inquiries regarding special permissions, contact [seremark056@gmail.com](mailto:seremark056@gmail.com).
 
 ---
 
-## **Contact**
-
+## 9. Contact
 **Sere Gergő Márk**  
-- **Website**: [marksere.com](https://marksere.com)  
-- **GitHub**: [github.com/SereMark](https://github.com/SereMark)  
-- **LinkedIn**: [linkedin.com/in/seremark](https://linkedin.com/in/seremark)  
-- **Email**: [seremark056@gmail.com](mailto:seremark056@gmail.com)
-
-Feel free to reach out with questions, suggestions, or collaboration ideas!
+- Website: [marksere.com](https://marksere.com)  
+- GitHub: [github.com/SereMark](https://github.com/SereMark)  
+- LinkedIn: [linkedin.com/in/seremark](https://linkedin.com/in/seremark)  
+- Email: [seremark056@gmail.com](mailto:seremark056@gmail.com)
