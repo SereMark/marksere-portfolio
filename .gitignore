@@ -1,109 +1,43 @@
-# Node.js dependencies
+# Node.js
 node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Build output
-dist/
-build/
-.vite/
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
-# Environment variables
-.env
-.env.*
-!.env.example
+# Vite
+dist/
+.vite/
+*.local
 
-# Editor and OS specific files
+# Tailwind CSS
+*.css.map
+
+# MacOS
 .DS_Store
-Thumbs.db
-*.swp
-*.swo
-*.bak
-*.tmp
-*.~undo-tree
+
+# Logs
+logs/
+*.log
+*.gz
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Editor directories and files
 .idea/
 .vscode/
-*.iml
-*.log
-*.gz
+*.swp
+*.swo
 
-# Static hosting platform files (Netlify)
-.netlify/
-_netlify/
-functions/
+# Environment files
+.env
+.env.local
+.env.*.local
 
-# Cache directories
-.cache/
-.vite-cache/
-.vscode-test/
-tmp/
-temp/
-eslintcache
-*.tsbuildinfo
-
-# Tailwind CSS and SASS/SCSS related
-tailwind.config.js
-tailwind.config.cjs
-tailwind.config.ts
-postcss.config.js
-postcss.config.cjs
-*.map
-
-# Animations/Graphics Tools
-*.blend
-*.gltf
-*.glb
-*.fbx
-*.usdz
-*.dae
-*.obj
-*.stl
-
-# Images and other generated assets
-public/assets/generated/
-public/images/*.webp
-
-# React and Vite specific files
-*.react-cache
-*.vite-plugin-optimize/
-
-# Coverage reports
+# Coverage directories
 coverage/
 
-# Testing and linting outputs
-*.snap
-jest-config.js
-jest.config.js
-cypress/
-
-# Miscellaneous
-!README.md
-*.bak
-*.orig
-
-# Debug tool output
-*.log
-*.gz
-*.tgz
-
-# 3D Graphics tool configurations
-threejs.config.*
-gsap.config.*
-
-# Ignore Netlify-specific deploy logs
-.deploy_logs/
-
-# Lock files for other package managers
-composer.lock
-pipfile.lock
-
-# Ignore built or generated files during development
-public/js/
-public/css/
+# Build output
+build/
+out/

@@ -1,82 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark Sere | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        :root {
-            --background-color: #f7f8fc;
-            --text-color: #333333;
-            --accent-color: #4A90E2;
-            --font-family: 'Inter', sans-serif;
-            --border-radius: 10px;
-            --shadow-color: rgba(0, 0, 0, 0.05);
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: var(--background-color);
-            font-family: var(--font-family);
-            color: var(--text-color);
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: var(--border-radius);
-            box-shadow: 0 10px 20px var(--shadow-color);
-            max-width: 360px;
-            width: 90%;
-            animation: fadeIn 0.8s ease-in-out;
-        }
-        .icon {
-            font-size: 4rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1rem;
-            color: #555555;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 480px) {
-            .icon {
-                font-size: 3.5rem;
-            }
-            h1 {
-                font-size: 1.5rem;
-            }
-            p {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>marksere.com - Under Construction</title>
+  <meta name="description" content="marksere.com is currently under construction. I am building a modern portfolio to showcase my expertise in AI, robotics, and software development. Stay tuned!">
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container" role="main" aria-labelledby="main-heading">
-        <div class="icon" aria-hidden="true">🚀</div>
-        <h1 id="main-heading">Mark Sere</h1>
-        <p>This website is under construction. Please check back soon!</p>
-    </div>
+<body class="bg-primary text-white">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
