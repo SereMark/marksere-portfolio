@@ -10,9 +10,9 @@ function App() {
         <div className="mb-6">
           <WrenchIcon />
         </div>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-text-primary">Site Under Construction</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-text-primary">Under Construction</h1>
         <p className="mt-4 text-lg md:text-xl text-text-secondary">
-          I’m creating a modern portfolio to showcase my skills in AI, robotics, and software development. Stay tuned for updates!
+          Stay tuned for updates!
         </p>
         <p className="mt-8 text-sm md:text-base text-text-secondary">
           &copy; {new Date().getFullYear()} Mark Sere. All rights reserved.
