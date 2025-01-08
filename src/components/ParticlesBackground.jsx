@@ -1,13 +1,14 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import Particles from '@tsparticles/react';
 
-const ParticlesBackground = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
+const ParticlesBackground = ({ className }) => {
+  const particlesInit = async (engine) => {
+    const { loadFull } = await import('@tsparticles/engine');
+    await loadFull(engine);
   };
 
-  const particlesLoaded = (container) => {
+  const particlesLoaded = () => {
+    console.log("Particles loaded");
   };
 
   return (
@@ -17,25 +18,27 @@ const ParticlesBackground = () => {
       loaded={particlesLoaded}
       options={{
         background: {
-          color: {
-            value: 'transparent',
-          },
+          color: { value: 'transparent' },
         },
         fpsLimit: 60,
         interactivity: {
           events: {
-            onClick: { enable: false, mode: 'push' },
-            onHover: { enable: false, mode: 'repulse' },
+            onClick: { enable: true, mode: 'push' },
+            onHover: { enable: true, mode: 'repulse' },
             resize: true,
+          },
+          modes: {
+            push: { quantity: 4 },
+            repulse: { distance: 100, duration: 0.4 },
           },
         },
         particles: {
-          color: { value: '#10B981' },
+          color: { value: '#ffffff' },
           links: {
-            color: '#10B981',
+            color: '#ffffff',
             distance: 150,
             enable: true,
-            opacity: 0.05,
+            opacity: 0.2,
             width: 1,
           },
           collisions: { enable: false },
@@ -44,20 +47,20 @@ const ParticlesBackground = () => {
             enable: true,
             outModes: { default: 'bounce' },
             random: false,
-            speed: 0.3,
+            speed: 1,
             straight: false,
           },
           number: {
             density: { enable: true, area: 800 },
-            value: 20,
+            value: 50,
           },
-          opacity: { value: 0.05 },
+          opacity: { value: 0.5 },
           shape: { type: 'circle' },
-          size: { value: { min: 1, max: 2 } },
+          size: { value: { min: 1, max: 3 } },
         },
         detectRetina: true,
       }}
-      className="absolute inset-0 z-0"
+      className={className}
     />
   );
 };
