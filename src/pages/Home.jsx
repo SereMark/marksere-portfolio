@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import ParticlesBackground from '../components/ParticlesBackground';
 
 // Example data for Blog and Portfolio
 const posts = [
@@ -118,10 +117,6 @@ const Home = () => {
         className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden text-white"
         data-scroll-section
       >
-        {/* Particles behind content */}
-        <div className="absolute inset-0 z-[-1]">
-          <ParticlesBackground />
-        </div>
 
         {/* Subtle dark animated gradient background */}
         <div

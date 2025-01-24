@@ -14,14 +14,12 @@ const CustomCursor = () => {
     };
 
     const handleMouseOver = (e) => {
-      // If hovering over a link (or anything else you want), add the hover class
       if (cursor && e.target.tagName.toLowerCase() === 'a') {
         cursor.classList.add('cursor-hover');
       }
     };
 
     const handleMouseOut = (e) => {
-      // Remove the hover class when not hovering a link
       if (cursor && e.target.tagName.toLowerCase() === 'a') {
         cursor.classList.remove('cursor-hover');
       }

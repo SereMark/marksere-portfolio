@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Optionally, social icons in a separate row */}
+      {/* Social icons */}
       <div className="max-w-7xl mx-auto px-4 mt-6 flex justify-center space-x-6">
         <a
           href="mailto:seremark056@gmail.com"

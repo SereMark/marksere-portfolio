@@ -2,13 +2,12 @@
   position: fixed;
   width: 16px;
   height: 16px;
-  border: 2px solid #10b981; /* Accent color border */
+  border: 2px solid #10b981;
   border-radius: 9999px;
   background: transparent;
   pointer-events: none;
   z-index: 9999;
 
-  /* Smooth transitions for size, color, and position */
   transition:
     width 0.15s ease-out,
     height 0.15s ease-out,
@@ -16,17 +15,14 @@
     border 0.15s ease-out,
     transform 0.06s ease-out;
 
-  /* Subtle glow for a premium look */
   box-shadow: 0 0 5px rgba(16, 185, 129, 0.4), 0 0 10px rgba(16, 185, 129, 0.2);
 }
 
 .cursor-hover {
-  /* On hover, the cursor expands and fills with accent color */
   background: #10b981; 
   width: 24px;
   height: 24px;
   border-color: transparent;
 
-  /* Increase the glow when hovering on links */
   box-shadow: 0 0 10px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.3);
 }
