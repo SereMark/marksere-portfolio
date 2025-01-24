@@ -8,7 +8,7 @@ const ParticlesBackground = ({ className }) => {
   };
 
   const particlesLoaded = () => {
-    console.log("Particles loaded");
+    console.log('Particles loaded');
   };
 
   return (

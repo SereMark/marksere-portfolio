@@ -24,9 +24,6 @@ marksere.com is designed to demonstrate advanced technical skills and creativity
 - **Dynamic Cursor**  
   Custom animated cursor for a modern, interactive feel.
 
-- **Dark Mode**  
-  Toggle between light and dark themes with user preference retention.
-
 - **Contact Form**  
   Minimalistic form integrated with Netlify Forms, plus direct links to external profiles.
 
