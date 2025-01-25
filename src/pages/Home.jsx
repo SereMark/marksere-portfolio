@@ -337,7 +337,7 @@ const Home = () => {
               <h3 className="text-2xl font-bold mb-4 text-accent">Quick Stats</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <h4 className="text-4xl font-extrabold text-accent">2</h4>
+                  <h4 className="text-4xl font-extrabold text-accent">3</h4>
                   <p className="text-sm mt-2 text-gray-300">Years of Experience</p>
                 </div>
                 <div>
