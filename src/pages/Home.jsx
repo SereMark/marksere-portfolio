@@ -118,11 +118,10 @@ const Home = () => {
         className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden text-white"
         data-scroll-section
       >
-        
         {/* Subtle dark animated gradient background */}
         <div
           className="absolute inset-0 z-0 bg-gradient-to-r 
-          from-[#0e1622] to-[#1b2735] animate-gradientBackground bg-200%"
+          from-[#0e1622] to-[#1b2735] animate-gradientBackground bg-[200%]"
         />
 
         {/* Hero Content */}
@@ -131,7 +130,7 @@ const Home = () => {
           initial="hidden"
           animate="show"
           transition={{ duration: 1.2, ease: 'easeInOut' }}
-          className="relative z-10 flex flex-col items-center text-center py-10"
+          className="relative z-10 flex flex-col items-center text-center py-10 px-4 md:px-8"
         >
           <motion.h1
             variants={fadeUpVariant}
@@ -154,9 +153,8 @@ const Home = () => {
             variants={fadeUpVariant}
             className="mt-4 max-w-2xl text-gray-300 text-base md:text-lg leading-relaxed mx-auto"
           >
-            Creating intelligent software solutions that fuse cutting-edge
-            research with real-world applications. Let’s reshape the future with
-            AI & robotics.
+            Creating intelligent software solutions that fuse cutting-edge research
+            with real-world applications. Let’s reshape the future with AI & robotics.
           </motion.p>
         </motion.div>
 
@@ -263,10 +261,7 @@ const Home = () => {
         </motion.div>
 
         {/* Divider bottom */}
-        <div
-          className="pointer-events-none absolute bottom-0 left-0 right-0 
-          overflow-hidden leading-[0] z-10"
-        >
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 overflow-hidden leading-[0] z-10">
           <svg
             className="relative block w-full h-20"
             xmlns="http://www.w3.org/2000/svg"
@@ -323,7 +318,7 @@ const Home = () => {
               <img
                 src="assets/profile.jpg"
                 alt="profile"
-                className="w-36 h-36 rounded-full mb-4 md:mb-0 md:mr-6 border-4 border-accent"
+                className="w-36 h-36 rounded-full mb-4 md:mb-0 md:mr-6 border-4 border-accent object-cover"
               />
               <div>
                 <p className="mb-4 leading-relaxed text-gray-200">
@@ -403,7 +398,7 @@ const Home = () => {
           <h2 className="text-4xl font-extrabold text-accent mb-8">Portfolio</h2>
 
           {/* Filter Buttons */}
-          <div className="mb-8 flex flex-wrap gap-3">
+          <div className="mb-8 flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -465,7 +460,7 @@ const Home = () => {
 
       {/* =============== BLOG SECTION =============== */}
       <section
-        className="relative w-full overflow-hidden text-gray-100 py-20" 
+        className="relative w-full overflow-hidden text-gray-100 py-20"
         data-scroll-section
       >
         <div className="absolute inset-0 z-0 bg-[#0e1622] opacity-95" />
@@ -475,12 +470,13 @@ const Home = () => {
         >
           <svg
             className="relative block w-full h-20"
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 1200 120" preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
           >
             <path
               d="M321.39,56.6C181.25,86.43,69.08,116,0,133.33H1200V0C1129.95,54.85,
-                995.44,105.35,814,54.14,662.83,12.69,497.38,33.6,
+                995.44,105.35,814,54.14C662.83,12.69,497.38,33.6,
                 321.39,56.6Z"
               className="fill-current text-[#0e1622]"
             />
@@ -495,7 +491,7 @@ const Home = () => {
           className="relative z-10 max-w-7xl mx-auto px-4 md:px-8"
         >
           <h2 className="text-4xl font-extrabold text-accent mb-8">Blog</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post, i) => (
               <motion.div
