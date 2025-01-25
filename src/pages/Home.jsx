@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-// Example data for Blog and Portfolio
+// Blog Titles
 const posts = [
   {
     id: 1,
@@ -12,53 +12,78 @@ const posts = [
   },
   {
     id: 2,
-    title: 'Mastering Robotics Foundations for AI Engineers',
+    title: 'The Challenges of Learning Robotics as an AI Engineer',
     category: 'Robotics',
-    image: 'https://via.placeholder.com/400x250?text=Robotics+101',
+    image: 'https://via.placeholder.com/400x250?text=Robotics+Challenges',
   },
   {
     id: 3,
-    title: 'Lessons from an Exchange Semester at JKU Linz',
+    title: 'My Goals for an Exchange Semester at JKU Linz',
     category: 'Personal Growth',
-    image: 'https://via.placeholder.com/400x250?text=JKU+Linz',
+    image: 'https://via.placeholder.com/400x250?text=JKU+Linz+Goals',
   },
   {
     id: 4,
-    title: 'Balancing Code & Fitness: Tips for Developers',
+    title: 'Balancing Studies and Fitness: A Student’s Perspective',
     category: 'Personal Growth',
-    image: 'https://via.placeholder.com/400x250?text=Fitness+and+Code',
+    image: 'https://via.placeholder.com/400x250?text=Balance+Studies+Fitness',
   },
 ];
 
+// Projects
 const projectsData = [
   {
     id: 1,
     title: 'Hybrid Chess AI',
     category: 'AI',
-    description: 'CNN meets MCTS for advanced chess engine design.',
+    description: 'Developed a hybrid chess AI for my thesis using CNN and MCTS, focusing on generalization and strategic gameplay. Opening book support added for human play.',
     image: 'https://via.placeholder.com/400x250?text=Chess+AI',
     github: 'https://github.com/SereMark/hybrid-chess-ai',
   },
   {
     id: 2,
-    title: 'AI-Intensive Robotic System',
-    category: 'Robotics',
-    description: 'Exploring AI-driven control for next-gen robotics.',
-    image: 'https://via.placeholder.com/400x250?text=Robotic+Control',
-    github: '',
-  },
-  {
-    id: 3,
     title: 'Full-Stack Developer Projects',
     category: 'Software',
     description:
-      'Collection of front-end & back-end solutions I built professionally.',
+      'Contributed to multiple front-end and back-end solutions, including designing web apps with C#, .NET, and JavaScript during my two years as a full-stack developer.',
     image: 'https://via.placeholder.com/400x250?text=FullStack+Projects',
     github: 'https://github.com/SereMark',
   },
+  {
+    id: 3,
+    title: 'AI Experimentation and Coursework',
+    category: 'AI',
+    description: 'Designed smaller AI/ML projects during coursework, including image classifiers, sentiment analysis models, and data-driven web apps.',
+    image: 'https://via.placeholder.com/400x250?text=AI+Experimentation',
+    github: 'https://github.com/SereMark/ai-experimentation',
+  },
 ];
 
-// Framer Motion Variants
+// Focus Areas
+const focusAreas = [
+  {
+    title: 'AI Solutions',
+    icon: '💡',
+    text: 'Designing intelligent software solutions leveraging deep learning techniques, including CNNs and reinforcement learning for decision-making systems.',
+  },
+  {
+    title: 'Robotics Integration',
+    icon: '🤖',
+    text: 'Integrating AI algorithms with robotics to enable dynamic, real-world applications, currently exploring robotics foundations during coursework.',
+  },
+  {
+    title: 'Full-Stack Development',
+    icon: '🌐',
+    text: 'Building modern, scalable applications using .NET, JavaScript, and cloud technologies, with two years of professional experience.',
+  },
+  {
+    title: 'Research and Learning',
+    icon: '🚀',
+    text: 'Exploring advanced machine learning topics, including unsupervised learning, transformers, and Monte Carlo Tree Search for real-world applications.',
+  },
+];
+
+// ================== FRAMER MOTION VARIANTS ================== //
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 30 },
   show: {
@@ -78,30 +103,7 @@ const heroStagger = {
   },
 };
 
-// Focus Areas
-const focusAreas = [
-  {
-    title: 'AI Solutions',
-    icon: '💡',
-    text: 'End-to-end AI dev, from data to deployment.',
-  },
-  {
-    title: 'Robotics Integration',
-    icon: '🤖',
-    text: 'Seamless synergy between AI algorithms & robots.',
-  },
-  {
-    title: 'Full-Stack Apps',
-    icon: '🌐',
-    text: 'Robust backends, modern frontends, cloud-ready.',
-  },
-  {
-    title: 'Research & Innovation',
-    icon: '🚀',
-    text: 'Pushing boundaries in ML & robotics for next-gen.',
-  },
-];
-
+// ================== MAIN COMPONENT ================== //
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const categories = ['All', 'AI', 'Robotics', 'Software', 'Personal'];
@@ -322,16 +324,10 @@ const Home = () => {
               />
               <div>
                 <p className="mb-4 leading-relaxed text-gray-200">
-                  I&apos;m <strong>Mark Sere</strong>, dedicated to crafting advanced AI
-                  solutions that integrate seamlessly with robotics. I studied at{' '}
-                  <strong>SZTE TTIK</strong> and spent an exchange semester at{' '}
-                  <strong>JKU Linz</strong>, honing my knowledge of machine learning
-                  and software engineering.
+                  I&apos;m <strong>Mark Sere</strong>, a third-year Computer Science student at the University of Szeged TTIK, majoring in Software Engineering. Currently, I&apos;m pursuing an exchange semester at JKU Linz, focusing on machine learning, robotics, and AI-intensive systems.
                 </p>
                 <p className="leading-relaxed text-gray-200">
-                  My vision is to apply AI to transformative fields like healthcare,
-                  automotive, and industrial automation. When I’m not coding, I’m
-                  ideating new solutions or staying physically active.
+                  My interests lie at the intersection of artificial intelligence and robotics, with aspirations to contribute to transformative fields like healthcare and autonomous systems. When I’m not coding, I’m exploring new ways to stay active or refining my chess AI thesis project that blends convolutional neural networks with Monte Carlo Tree Search.
                 </p>
               </div>
             </div>
@@ -341,19 +337,19 @@ const Home = () => {
               <h3 className="text-2xl font-bold mb-4 text-accent">Quick Stats</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <h4 className="text-4xl font-extrabold text-accent">5+</h4>
+                  <h4 className="text-4xl font-extrabold text-accent">2</h4>
                   <p className="text-sm mt-2 text-gray-300">Years of Experience</p>
                 </div>
                 <div>
-                  <h4 className="text-4xl font-extrabold text-accent">7</h4>
-                  <p className="text-sm mt-2 text-gray-300">Projects</p>
+                  <h4 className="text-4xl font-extrabold text-accent">5</h4>
+                  <p className="text-sm mt-2 text-gray-300">Academic & Professional Projects</p>
                 </div>
                 <div>
                   <h4 className="text-4xl font-extrabold text-accent">6</h4>
                   <p className="text-sm mt-2 text-gray-300">Programming Languages</p>
                 </div>
                 <div>
-                  <h4 className="text-4xl font-extrabold text-accent">8</h4>
+                  <h4 className="text-4xl font-extrabold text-accent">5</h4>
                   <p className="text-sm mt-2 text-gray-300">Countries Visited</p>
                 </div>
               </div>
