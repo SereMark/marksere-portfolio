@@ -21,9 +21,6 @@ marksere.com is designed to demonstrate advanced technical skills and creativity
 - **Scroll-Triggered Animations**  
   Smooth fade-ins, zoom effects, and parallax scrolling powered by GSAP and Framer Motion.
 
-- **Dynamic Cursor**  
-  Custom animated cursor for a modern, interactive feel.
-
 - **Contact Form**  
   Minimalistic form integrated with Netlify Forms, plus direct links to external profiles.
 

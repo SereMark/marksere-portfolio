@@ -7,21 +7,14 @@ import App from './App';
 
 const Root = () => {
   const scrollRef = useRef(null);
-  const locoScrollRef = useRef(null);
 
   useEffect(() => {
-    if (scrollRef.current) {
-      locoScrollRef.current = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        lerp: 0.07,
-      });
-    }
-    return () => {
-      if (locoScrollRef.current) {
-        locoScrollRef.current.destroy();
-      }
-    };
+    const locoScroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      lerp: 0.07,
+    });
+    return () => locoScroll.destroy();
   }, []);
 
   return (
