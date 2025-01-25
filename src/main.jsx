@@ -18,7 +18,7 @@ const Root = () => {
   }, []);
 
   return (
-    <div id="main-container" data-scroll-container ref={scrollRef}>
+    <div id="main-container" data-scroll-container ref={scrollRef} className="overflow-x-hidden" >
       <App />
     </div>
   );
