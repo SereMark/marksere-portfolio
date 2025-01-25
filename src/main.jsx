@@ -7,18 +7,46 @@ import App from './App';
 
 const Root = () => {
   const scrollRef = useRef(null);
+  const locoScroll = useRef(null);
 
   useEffect(() => {
-    const locoScroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      lerp: 0.07,
-    });
-    return () => locoScroll.destroy();
+    if (scrollRef.current) {
+      locoScroll.current = new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        lerp: 0.07,
+      });
+
+      // Update LocomotiveScroll on window resize
+      const handleResize = () => {
+        locoScroll.current.update();
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Refresh LocomotiveScroll after images load
+      const images = scrollRef.current.querySelectorAll('img');
+      const imagePromises = Array.from(images).map((img) => {
+        if (img.complete) return Promise.resolve();
+        return new Promise((resolve) => {
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+      });
+
+      Promise.all(imagePromises).then(() => {
+        locoScroll.current.update();
+      });
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+        if (locoScroll.current) locoScroll.current.destroy();
+      };
+    }
   }, []);
 
   return (
-    <div id="main-container" data-scroll-container ref={scrollRef} className="overflow-x-hidden" >
+    <div id="main-container" data-scroll-container ref={scrollRef}>
       <App />
     </div>
   );

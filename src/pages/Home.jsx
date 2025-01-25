@@ -531,7 +531,7 @@ const Home = () => {
       {/* ================== FOOTER SECTION ================== */}
       <footer
         data-scroll-section
-        className="relative bg-[#0e1622] text-gray-300 py-10"
+        className="relative bg-[#0e1622] text-gray-300 py-10 min-h-[200px]"
       >
         {/* Shape divider at the top */}
         <div
