@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import Home from './pages/Home';
-import GermanFlashcards from './pages/GermanFlashcards';
+import GermanGrammar from './pages/GermanGrammar';
 
 const App = ({ currentPage, setCurrentPage }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   const navItems = [
     { label: 'Home', value: 'home' },
-    { label: 'German Flashcards', value: 'flashcards' },
+    { label: 'German Grammar', value: 'Grammar' },
   ];
 
   const handleNavClick = (value) => {
@@ -78,7 +78,7 @@ const App = ({ currentPage, setCurrentPage }) => {
       </header>
 
       {currentPage === 'home' && <Home />}
-      {currentPage === 'flashcards' && <GermanFlashcards />}
+      {currentPage === 'Grammar' && <GermanGrammar />}
     </div>
   );
 };
