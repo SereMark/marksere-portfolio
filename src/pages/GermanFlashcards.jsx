@@ -452,6 +452,9 @@ export default function GermanLearningPage() {
   const [openSectionIndex, setOpenSectionIndex] = useState(null);
   const toggleSection = (index) => {
     setOpenSectionIndex((prev) => (prev === index ? null : index));
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
   };
 
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
@@ -548,6 +551,9 @@ export default function GermanLearningPage() {
     } else {
       setCurrentIndex(currentList.length);
     }
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
   }
 
   function handleMarkAsKnown() {
@@ -565,10 +571,16 @@ export default function GermanLearningPage() {
       setCurrentIndex(newList.length - 1);
     }
     setShowMeaning(false);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
   }
 
   function toggleMeaning() {
     setShowMeaning((prev) => !prev);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
   }
 
   const currentWordObj = currentIndex >= 0 && currentIndex < currentList.length ? currentList[currentIndex] : null;
