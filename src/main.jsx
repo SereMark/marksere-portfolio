@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
@@ -9,6 +9,8 @@ const Root = () => {
   const scrollRef = useRef(null);
   const locoScroll = useRef(null);
 
+  const [currentPage, setCurrentPage] = useState('home');
+
   useEffect(() => {
     if (scrollRef.current) {
       locoScroll.current = new LocomotiveScroll({
@@ -17,14 +19,11 @@ const Root = () => {
         lerp: 0.07,
       });
 
-      // Update LocomotiveScroll on window resize
       const handleResize = () => {
         locoScroll.current.update();
       };
-
       window.addEventListener('resize', handleResize);
 
-      // Refresh LocomotiveScroll after images load
       const images = scrollRef.current.querySelectorAll('img');
       const imagePromises = Array.from(images).map((img) => {
         if (img.complete) return Promise.resolve();
@@ -45,9 +44,15 @@ const Root = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (locoScroll.current) {
+      locoScroll.current.update();
+    }
+  }, [currentPage]);
+
   return (
     <div id="main-container" data-scroll-container ref={scrollRef}>
-      <App />
+      <App currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </div>
   );
 };
