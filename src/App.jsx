@@ -58,26 +58,23 @@ const App = ({ currentPage, setCurrentPage }) => {
           </div>
         </div>
 
-        <div
-          className={`md:hidden bg-[#1b2735] border-t border-gray-700 
-            origin-top transition-transform transform overflow-hidden 
-            ${navOpen ? 'scale-y-100' : 'scale-y-0'}`}
-          style={{ transformOrigin: 'top' }}
-        >
-          <nav className="flex flex-col p-2">
-            {navItems.map((item) => (
-              <button
-                key={item.value}
-                onClick={() => handleNavClick(item.value)}
-                className={`w-full text-left px-3 py-2 rounded my-1 transition hover:text-accent ${
-                  isActive(item.value) ? 'bg-gray-800 font-semibold' : ''
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-        </div>
+        {navOpen && (
+          <div className="md:hidden bg-[#1b2735] border-t border-gray-700">
+            <nav className="flex flex-col p-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.value}
+                  onClick={() => handleNavClick(item.value)}
+                  className={`w-full text-left px-3 py-2 rounded my-1 transition hover:text-accent ${
+                    isActive(item.value) ? 'bg-gray-800 font-semibold' : ''
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          </div>
+        )}
       </header>
 
       {currentPage === 'home' && <Home />}
