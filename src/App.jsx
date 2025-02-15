@@ -36,15 +36,11 @@ const App = ({ currentPage, setCurrentPage }) => {
               <button
                 key={item.value}
                 onClick={() => handleNavClick(item.value)}
-                className={`
-                  px-3 py-2 rounded transition 
-                  hover:text-accent
-                  ${
-                    isActive(item.value)
-                      ? 'bg-accent text-[#1b2735] font-semibold'
-                      : ''
-                  }
-                `}
+                className={`px-3 py-2 rounded transition hover:text-accent ${
+                  isActive(item.value)
+                    ? 'bg-accent text-[#1b2735] font-semibold'
+                    : ''
+                }`}
               >
                 {item.label}
               </button>
@@ -57,24 +53,15 @@ const App = ({ currentPage, setCurrentPage }) => {
               className="focus:outline-none text-white"
               aria-label="Toggle Mobile Menu"
             >
-              {navOpen ? (
-                <AiOutlineClose size={24} />
-              ) : (
-                <AiOutlineMenu size={24} />
-              )}
+              {navOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
             </button>
           </div>
         </div>
 
         <div
-          className={`
-            md:hidden 
-            bg-[#1b2735] 
-            border-t border-gray-700 
-            origin-top
-            transition-transform transform 
-            ${navOpen ? 'scale-y-100' : 'scale-y-0'} 
-          `}
+          className={`md:hidden bg-[#1b2735] border-t border-gray-700 origin-top transition-transform transform ${
+            navOpen ? 'scale-y-100' : 'scale-y-0'
+          }`}
           style={{ transformOrigin: 'top' }}
         >
           <nav className="flex flex-col p-2">
@@ -82,15 +69,9 @@ const App = ({ currentPage, setCurrentPage }) => {
               <button
                 key={item.value}
                 onClick={() => handleNavClick(item.value)}
-                className={`
-                  w-full text-left px-3 py-2 rounded my-1
-                  transition hover:text-accent 
-                  ${
-                    isActive(item.value)
-                      ? 'bg-gray-800 font-semibold'
-                      : ''
-                  }
-                `}
+                className={`w-full text-left px-3 py-2 rounded my-1 transition hover:text-accent ${
+                  isActive(item.value) ? 'bg-gray-800 font-semibold' : ''
+                }`}
               >
                 {item.label}
               </button>
