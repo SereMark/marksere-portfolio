@@ -59,9 +59,9 @@ const App = ({ currentPage, setCurrentPage }) => {
         </div>
 
         <div
-          className={`md:hidden bg-[#1b2735] border-t border-gray-700 origin-top transition-transform transform ${
-            navOpen ? 'scale-y-100' : 'scale-y-0'
-          }`}
+          className={`md:hidden bg-[#1b2735] border-t border-gray-700 
+            origin-top transition-transform transform overflow-hidden 
+            ${navOpen ? 'scale-y-100' : 'scale-y-0'}`}
           style={{ transformOrigin: 'top' }}
         >
           <nav className="flex flex-col p-2">
