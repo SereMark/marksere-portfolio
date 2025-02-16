@@ -458,7 +458,7 @@ function QuizSection() {
     if (showQuizResult) {
       setTimeout(() => {
         window.dispatchEvent(new Event('resize'));
-      }, 100);
+      }, 10);
     }
   }, [showQuizResult]);
   const handleQuizOptionSelect = (idx) => {
