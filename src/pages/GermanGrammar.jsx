@@ -573,7 +573,7 @@ function GrammarOverview() {
     setOpenSectionIndex((prev) => (prev === index ? null : index));
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 300);
+    }, 10);
   };
   return (
     <motion.div variants={fadeUpVariant} className="mb-10 w-full">
@@ -658,7 +658,7 @@ function PracticeSession() {
     }
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 300);
+    }, 10);
   }
   function handleMarkAsKnown() {
     if (!currentList.length || currentIndex < 0) return;
@@ -677,13 +677,13 @@ function PracticeSession() {
     setShowMeaning(false);
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 300);
+    }, 10);
   }
   function toggleMeaning() {
     setShowMeaning((prev) => !prev);
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 300);
+    }, 10);
   }
   const currentWordObj = currentIndex >= 0 && currentIndex < currentList.length ? currentList[currentIndex] : null;
   const categoryNames = Object.keys(categoriesMap);
