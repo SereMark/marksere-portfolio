@@ -271,7 +271,7 @@ const Home = () => {
         className="relative w-full overflow-hidden text-gray-100 py-20"
         data-scroll-section
       >
-        <div className="absolute inset-0 z-0 bg-[#0e1622] opacity-95" />
+        <div className="absolute inset-0 z-0 bg-[#0e1622]" />
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 overflow-hidden leading-[0] z-10">
           <svg
             className="relative block w-full h-20"
@@ -351,7 +351,7 @@ const Home = () => {
         className="relative w-full overflow-hidden text-gray-100 py-20"
         data-scroll-section
       >
-        <div className="absolute inset-0 z-0 bg-[#0e1622] opacity-95" />
+        <div className="absolute inset-0 z-0 bg-[#0e1622]" />
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 overflow-hidden leading-[0] z-10">
           <svg
             className="relative block w-full h-20"
@@ -427,7 +427,7 @@ const Home = () => {
         className="relative w-full overflow-hidden text-gray-100 py-20"
         data-scroll-section
       >
-        <div className="absolute inset-0 z-0 bg-[#0e1622] opacity-95" />
+        <div className="absolute inset-0 z-0 bg-[#0e1622]" />
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 overflow-hidden leading-[0] z-10">
           <svg
             className="relative block w-full h-20"

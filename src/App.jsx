@@ -20,7 +20,7 @@ const App = ({ currentPage, setCurrentPage }) => {
 
   return (
     <div className="font-sans min-h-screen bg-primary text-gray-100">
-      <header className="bg-[#1b2735] sticky top-0 z-50 shadow-md">
+      <header className="bg-[#1b2735] shadow-md">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div
             className="text-2xl font-bold cursor-pointer transition-transform duration-300 hover:scale-105"
