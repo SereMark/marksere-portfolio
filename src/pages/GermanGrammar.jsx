@@ -786,9 +786,12 @@ export default function GermanLearningPage() {
           German Past Tense & Practice Session
         </motion.h1>
         <div className="flex justify-center mb-8">
-          {tabs.map((tab) => (
-            <button
+          {tabs.map((tab, index) => (
+            <motion.button
               key={tab.key}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               onClick={() => setActiveTab(tab.key)}
               className={`mx-2 px-4 py-2 rounded-full font-semibold text-sm transition ${
                 activeTab === tab.key
@@ -797,7 +800,7 @@ export default function GermanLearningPage() {
               }`}
             >
               {tab.label}
-            </button>
+            </motion.button>
           ))}
         </div>
         {activeTab === 'quiz' && <QuizSection />}
