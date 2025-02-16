@@ -490,7 +490,7 @@ function QuizSection() {
     setQuizAnswers([]);
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
-    }, 100);
+    }, 10);
   };
   return (
     <motion.div variants={fadeUpVariant} className="mb-10 w-full">
