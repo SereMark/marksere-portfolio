@@ -6,16 +6,16 @@ const fadeUpVariant = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeInOut' },
-  },
+    transition: { duration: 0.6, ease: 'easeInOut' }
+  }
 };
 
 const containerVariant = {
   hidden: { opacity: 1 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 },
-  },
+    transition: { staggerChildren: 0.1 }
+  }
 };
 
 const grammarSections = [
@@ -29,7 +29,7 @@ const grammarSections = [
           <li>Formed with <strong>haben</strong> or <strong>sein</strong> + <strong>Partizip II</strong>.</li>
           <li><em>Example:</em> Ich habe Deutsch gelernt. (<em>I have learned German.</em>)</li>
         </ul>
-        <p><strong>When to use &quot;haben&quot; vs. &quot;sein&quot;:</strong></p>
+        <p><strong>When to use "haben" vs. "sein":</strong></p>
         <ul className="list-disc list-inside mb-4">
           <li><strong>haben</strong> → used with most verbs (gelernt, gemacht, gehört).</li>
           <li><strong>sein</strong> → used with verbs showing <em>motion</em> or <em>change of state</em> (gegangen, gefahren, gekommen).</li>
@@ -39,11 +39,11 @@ const grammarSections = [
           <li>Regular verbs: <strong>ge- + verb stem + -(e)t</strong> → gelernt, gemacht, gehört</li>
           <li>Irregular verbs: <strong>ge- + modified stem + -en</strong> → geschrieben, gekommen, gegessen</li>
           <li>Separable verbs: <strong>prefix + ge- + verb</strong> → weggebracht, aufgestanden</li>
-          <li>Inseparable verbs: <strong>NO &quot;ge-&quot;</strong> → besucht, erklärt, vergessen</li>
-          <li>Verbs ending in <strong>-ieren</strong>: <strong>NO &quot;ge-&quot; + -t</strong> → studiert, telefoniert</li>
+          <li>Inseparable verbs: <strong>NO "ge-"</strong> → besucht, erklärt, vergessen</li>
+          <li>Verbs ending in <strong>-ieren</strong>: <strong>NO "ge-" + -t</strong> → studiert, telefoniert</li>
         </ul>
       </>
-    ),
+    )
   },
   {
     title: "2️⃣ Das Präteritum (Simple Past)",
@@ -73,7 +73,7 @@ const grammarSections = [
           <li><strong>sein, haben, modal verbs</strong> → typically Präteritum in speech (Ich war müde).</li>
         </ul>
       </>
-    ),
+    )
   },
   {
     title: "3️⃣ Strong & Weak Verb Conjugations",
@@ -95,7 +95,7 @@ const grammarSections = [
           <li>denken → ich dachte; bringen → ich brachte</li>
         </ul>
       </>
-    ),
+    )
   },
   {
     title: "4️⃣ Separable & Inseparable Prefix Verbs in Past Tense",
@@ -109,12 +109,12 @@ const grammarSections = [
         </ul>
         <p><strong>Inseparable Prefix Verbs (Untrennbare Verben)</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>No &quot;ge-&quot; in Perfekt.</li>
+          <li>No "ge-" in Perfekt.</li>
           <li>Ich habe <strong>besucht</strong> (besuchen).</li>
           <li>Sie hat <strong>verstanden</strong> (verstehen).</li>
         </ul>
       </>
-    ),
+    )
   },
   {
     title: "5️⃣ Das Plusquamperfekt (Past Perfect)",
@@ -137,7 +137,7 @@ const grammarSections = [
           <li>Common in narratives to show which of two past actions occurred first.</li>
         </ul>
       </>
-    ),
+    )
   },
   {
     title: "6️⃣ Reflexive Verben im Perfekt (Reflexive Verbs in the Perfect Tense)",
@@ -155,62 +155,62 @@ const grammarSections = [
           <li>Never separate the reflexive pronoun from the main verb in the perfect tense. It follows immediately after the auxiliary.</li>
         </ul>
       </>
-    ),
-  },
+    )
+  }
 ];
 
 const quizQuestions = [
   {
     question: "Which auxiliary do you typically use with verbs of motion in the Perfekt?",
     options: ["haben", "sein", "both possible"],
-    correctIndex: 1,
+    correctIndex: 1
   },
   {
     question: "Which tense is most common in everyday spoken German?",
     options: ["Präteritum", "Perfekt", "Futur"],
-    correctIndex: 1,
+    correctIndex: 1
   },
   {
     question: "Which is correct for 'I went home' in spoken German?",
     options: [
       "Ich bin nach Hause gegangen",
       "Ich habe nach Hause gegangen",
-      "Ich war nach Hause gegangen",
+      "Ich war nach Hause gegangen"
     ],
-    correctIndex: 0,
+    correctIndex: 0
   },
   {
     question: "Which verb forms typically lose their umlaut in the Präteritum?",
     options: ["Mixed verbs", "Modal verbs", "Separable verbs"],
-    correctIndex: 1,
+    correctIndex: 1
   },
   {
     question: "How do you form the Plusquamperfekt?",
     options: [
       "Sein/haben (im Präsens) + Partizip II",
       "War/hatte + Partizip II",
-      "Wurde + Partizip II + haben/sein",
+      "Wurde + Partizip II + haben/sein"
     ],
-    correctIndex: 1,
+    correctIndex: 1
   },
   {
     question: "Which is an example of a reflexive verb in the Perfekt?",
     options: [
       "Ich habe mich gefreut",
       "Ich bin mich gefahren",
-      "Ich habe dich getroffen",
+      "Ich habe dich getroffen"
     ],
-    correctIndex: 0,
+    correctIndex: 0
   },
   {
     question: "Which sentence best illustrates a temporal sequence in the past?",
     options: [
       "Ich war müde, als ich joggen ging",
       "Ich hatte gegessen, bevor ich ins Kino ging",
-      "Ich ging ins Kino, wenn es regnete",
+      "Ich ging ins Kino, wenn es regnete"
     ],
-    correctIndex: 1,
-  },
+    correctIndex: 1
+  }
 ];
 
 const conjunctions = [
@@ -245,7 +245,7 @@ const conjunctions = [
   { german: "statt dass", english: "instead of", prateritum: "N/A", perfekt: "N/A", example: "Statt dass du meckerst, könntest du helfen." },
   { german: "außer wenn", english: "unless", prateritum: "N/A", perfekt: "N/A", example: "Ich werde nicht gehen, außer wenn du mich darum bittest." },
   { german: "ehe", english: "before (literary)", prateritum: "N/A", perfekt: "N/A", example: "Ehe wir schlafen gehen, lesen wir noch ein Buch." },
-  { german: "indes", english: "while, whereas (literary)", prateritum: "N/A", perfekt: "N/A", example: "Indes sie im Garten arbeiteten, ging die Sonne unter." },
+  { german: "indes", english: "while, whereas (literary)", prateritum: "N/A", perfekt: "N/A", example: "Indes sie im Garten arbeiteten, ging die Sonne unter." }
 ];
 
 const prepositions = [
@@ -286,7 +286,7 @@ const prepositions = [
   { german: "bezüglich", english: "regarding, concerning", prateritum: "N/A", perfekt: "N/A", example: "Bezüglich der neuen Regelung gibt es Fragen." },
   { german: "zugunsten", english: "in favor of", prateritum: "N/A", perfekt: "N/A", example: "Wir spenden Geld zugunsten der Kinderhilfe." },
   { german: "längs", english: "along (literary)", prateritum: "N/A", perfekt: "N/A", example: "Wir wanderten längs des Flusses." },
-  { german: "ungeachtet", english: "regardless of", prateritum: "N/A", perfekt: "N/A", example: "Ungeachtet des Wetters gehen wir spazieren." },
+  { german: "ungeachtet", english: "regardless of", prateritum: "N/A", perfekt: "N/A", example: "Ungeachtet des Wetters gehen wir spazieren." }
 ];
 
 const adverbs = [
@@ -340,7 +340,7 @@ const adverbs = [
   { german: "umsonst", english: "for free, in vain", prateritum: "N/A", perfekt: "N/A", example: "Wir konnten das Konzert umsonst besuchen." },
   { german: "gegebenenfalls", english: "if necessary, if need be", prateritum: "N/A", perfekt: "N/A", example: "Wir informieren Sie gegebenenfalls per E-Mail." },
   { german: "hin und wieder", english: "now and then", prateritum: "N/A", perfekt: "N/A", example: "Ich gehe hin und wieder ins Theater." },
-  { german: "keineswegs", english: "by no means", prateritum: "N/A", perfekt: "N/A", example: "Das ist keineswegs selbstverständlich." },
+  { german: "keineswegs", english: "by no means", prateritum: "N/A", perfekt: "N/A", example: "Das ist keineswegs selbstverständlich." }
 ];
 
 const questions = [
@@ -368,12 +368,12 @@ const questions = [
   { german: "was für ein", english: "what kind of", prateritum: "N/A", perfekt: "N/A", example: "Was für ein Auto fährst du?" },
   { german: "woraufhin", english: "upon which, whereupon", prateritum: "N/A", perfekt: "N/A", example: "Er sagte das, woraufhin sie ging." },
   { german: "von wem", english: "by whom, from whom", prateritum: "N/A", perfekt: "N/A", example: "Von wem ist dieser Brief?" },
-  { german: "mit wem", english: "with whom", prateritum: "N/A", perfekt: "N/A", example: "Mit wem gehst du ins Kino?" },
+  { german: "mit wem", english: "with whom", prateritum: "N/A", perfekt: "N/A", example: "Mit wem gehst du ins Kino?" }
 ];
 
 const verbs = [
   { german: "sein", english: "to be", prateritum: "war", perfekt: "ist gewesen", example: "Ich war gestern zu Hause. Ich bin immer pünktlich gewesen.", note: "Used both as a main verb and as an auxiliary for verbs indicating movement or a change of state. Bsp: Er ist nach Hause gegangen." },
-  { german: "haben", english: "to have", prateritum: "hatte", perfekt: "hat gehabt", example: "Ich hatte viel zu tun. Ich habe genug Arbeit gehabt.", note: "Used as an auxiliary for most verbs that do not indicate movement or a change of state." },
+  { german: "haben", english: "to have", prateritum: "hatte", perfekt: "hat gehabt", example: "Ich hatte viel zu tun. Ich habe genug Arbeit gehabt.", note: "Used as an auxiliary for most verbs that do not indicate movement or change of state." },
   { german: "werden", english: "to become", prateritum: "wurde", perfekt: "ist geworden", example: "Ich wurde müde. Ich bin richtig müde geworden.", note: "Indicates a change of state from one condition to another." },
   { german: "können", english: "can, be able to", prateritum: "konnte", perfekt: "hat gekonnt", example: "Ich konnte gut schwimmen. Ich habe es immer gekonnt.", note: "Expresses ability or possibility." },
   { german: "müssen", english: "must, have to", prateritum: "musste", perfekt: "hat gemusst", example: "Ich musste früher aufstehen. Ich habe es leider machen müssen.", note: "Indicates necessity or obligation." },
@@ -424,7 +424,7 @@ const verbs = [
   { german: "entdecken", english: "to discover", prateritum: "entdeckte", perfekt: "hat entdeckt", example: "Wir entdeckten einen neuen Weg. Wir haben den Pfad zufällig entdeckt.", note: "Refers to finding something new or unexpected." },
   { german: "entwickeln", english: "to develop", prateritum: "entwickelte", perfekt: "hat entwickelt", example: "Die Firma entwickelte ein neues Produkt. Sie haben es in kurzer Zeit entwickelt.", note: "The process of growth or evolution, often through planning and work." },
   { german: "putzen", english: "to clean", prateritum: "putzte", perfekt: "hat geputzt", example: "Ich putzte das Fenster. Ich habe heute schon das ganze Haus geputzt.", note: "Refers to cleaning or tidying up something." },
-  { german: "sich erinnern", english: "to remember (reflexive)", prateritum: "erinnerte sich", perfekt: "hat sich erinnert", example: "Ich erinnerte mich daran, den Termin wahrzunehmen. Ich habe mich rechtzeitig erinnert.", note: "Reflexive verb meaning 'to recall' or 'to keep in mind'." },
+  { german: "sich erinnern", english: "to remember (reflexive)", prateritum: "erinnerte sich", perfekt: "hat sich erinnert", example: "Ich erinnerte mich daran, den Termin wahrzunehmen. Ich habe mich rechtzeitig erinnert.", note: "Reflexive verb meaning 'to recall' or 'to keep in mind'." }
 ];
 
 const tenseRules = [
@@ -434,7 +434,7 @@ const tenseRules = [
   { german: "Bildung des Präteritums", english: "Formation of the simple past", prateritum: "N/A", perfekt: "N/A", example: "Regular and irregular forms must be memorized.", note: "The simple past is primarily used in written language and requires memorizing both regular and irregular forms." },
   { german: "Perfekt vs. Präteritum", english: "Usage in Spoken vs. Written Language", prateritum: "N/A", perfekt: "N/A", example: "Ich habe gegessen (spoken) vs. Ich aß (narrative writing).", note: "In everyday conversation, the Perfekt is most common, whereas the Präteritum is typically used in literature and formal writing." },
   { german: "Plusquamperfekt", english: "Usage of the Past Perfect", prateritum: "hatte/war", perfekt: "N/A", example: "Ich hatte gegessen, bevor ich wegging.", note: "Expresses an action that occurred before another past action." },
-  { german: "Reflexive Verben im Perfekt", english: "Reflexive verbs in the Perfect Tense", prateritum: "N/A", perfekt: "hat sich ... ge-verb", example: "Ich habe mich geduscht.", note: "Generally use 'haben' + reflexive pronoun + Partizip II." },
+  { german: "Reflexive Verben im Perfekt", english: "Reflexive verbs in the Perfect Tense", prateritum: "N/A", perfekt: "hat sich ... ge-verb", example: "Ich habe mich geduscht.", note: "Generally use 'haben' + reflexive pronoun + Partizip II." }
 ];
 
 const categoriesMap = {
@@ -443,29 +443,19 @@ const categoriesMap = {
   "Adverbs": adverbs,
   "Question Words": questions,
   "Verbs": verbs,
-  "Tense Rules": tenseRules,
+  "Tense Rules": tenseRules
 };
 
 const knownWordsKey = 'knownWordsExtended';
 
-export default function GermanLearningPage() {
-  const [openSectionIndex, setOpenSectionIndex] = useState(null);
-  const toggleSection = (index) => {
-    setOpenSectionIndex((prev) => (prev === index ? null : index));
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 300);
-  };
-
+function QuizSection() {
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
   const [quizScore, setQuizScore] = useState(0);
   const [showQuizResult, setShowQuizResult] = useState(false);
-
   const handleQuizOptionSelect = (idx) => {
     setSelectedOptionIndex(idx);
   };
-
   const handleQuizSubmit = () => {
     if (selectedOptionIndex === null) return;
     const isCorrect = selectedOptionIndex === quizQuestions[currentQuizIndex].correctIndex;
@@ -479,20 +469,99 @@ export default function GermanLearningPage() {
       setShowQuizResult(true);
     }
   };
-
   const handleQuizRestart = () => {
     setCurrentQuizIndex(0);
     setQuizScore(0);
     setSelectedOptionIndex(null);
     setShowQuizResult(false);
   };
+  return (
+    <motion.div variants={fadeUpVariant} className="mb-10 w-full">
+      <h2 className="text-2xl font-bold mb-4 text-center">Quick Tense Quiz</h2>
+      {!showQuizResult ? (
+        <div className="bg-[#1b2735] p-4 rounded-md shadow-md">
+          <p className="text-sm md:text-base font-semibold mb-3">
+            Question {currentQuizIndex + 1} of {quizQuestions.length}
+          </p>
+          <p className="text-sm md:text-base mb-4 text-gray-200">
+            {quizQuestions[currentQuizIndex].question}
+          </p>
+          <div className="flex flex-col gap-2 mb-4">
+            {quizQuestions[currentQuizIndex].options.map((opt, idx) => (
+              <label key={idx} className="flex items-center cursor-pointer">
+                <input
+                  type="radio"
+                  className="mr-2"
+                  checked={selectedOptionIndex === idx}
+                  onChange={() => handleQuizOptionSelect(idx)}
+                />
+                <span className="text-gray-300 text-sm md:text-base">{opt}</span>
+              </label>
+            ))}
+          </div>
+          <button
+            onClick={handleQuizSubmit}
+            className="bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
+      ) : (
+        <div className="bg-[#1b2735] p-4 rounded-md shadow-md text-center">
+          <p className="text-lg font-semibold mb-4">
+            You scored {quizScore} / {quizQuestions.length}
+          </p>
+          <button
+            onClick={handleQuizRestart}
+            className="bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-md"
+          >
+            Restart Quiz
+          </button>
+        </div>
+      )}
+    </motion.div>
+  );
+}
 
+function GrammarOverview() {
+  const [openSectionIndex, setOpenSectionIndex] = useState(null);
+  const toggleSection = (index) => {
+    setOpenSectionIndex((prev) => (prev === index ? null : index));
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
+  };
+  return (
+    <motion.div variants={fadeUpVariant} className="mb-10 w-full">
+      <h2 className="text-2xl font-bold mb-4 text-center">Grammar Overview</h2>
+      <div className="space-y-4">
+        {grammarSections.map((section, idx) => (
+          <div key={idx} className="bg-[#1b2735] p-4 rounded-md shadow-md">
+            <button
+              onClick={() => toggleSection(idx)}
+              className="w-full text-left font-semibold text-lg focus:outline-none flex justify-between items-center"
+            >
+              <span>{section.title}</span>
+              <span>{openSectionIndex === idx ? "−" : "+"}</span>
+            </button>
+            {openSectionIndex === idx && (
+              <div className="mt-3 text-sm md:text-base text-gray-200">
+                {section.content}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}
+
+function PracticeSession() {
   const [selectedCategory, setSelectedCategory] = useState('Conjunctions');
   const [currentList, setCurrentList] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showMeaning, setShowMeaning] = useState(false);
   const [knownWordsSet, setKnownWordsSet] = useState(new Set());
-
   useEffect(() => {
     const data = localStorage.getItem(knownWordsKey);
     if (data) {
@@ -504,15 +573,12 @@ export default function GermanLearningPage() {
       }
     }
   }, []);
-
   useEffect(() => {
     loadCategory(selectedCategory);
   }, [selectedCategory]);
-
   function saveKnownWords(updatedSet) {
     localStorage.setItem(knownWordsKey, JSON.stringify(Array.from(updatedSet)));
   }
-
   function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -520,11 +586,9 @@ export default function GermanLearningPage() {
     }
     return arr;
   }
-
   function filterKnownWords(list) {
     return list.filter((item) => !knownWordsSet.has(item.german));
   }
-
   function loadCategory(cat) {
     const rawList = categoriesMap[cat] || [];
     const filtered = filterKnownWords(rawList);
@@ -533,17 +597,14 @@ export default function GermanLearningPage() {
     setCurrentIndex(0);
     setShowMeaning(false);
   }
-
   function handleRestart() {
     loadCategory(selectedCategory);
   }
-
   function resetKnownWords() {
     localStorage.removeItem(knownWordsKey);
     setKnownWordsSet(new Set());
     loadCategory(selectedCategory);
   }
-
   function handleNextWord() {
     setShowMeaning(false);
     if (currentIndex < currentList.length - 1) {
@@ -555,7 +616,6 @@ export default function GermanLearningPage() {
       window.dispatchEvent(new Event('resize'));
     }, 300);
   }
-
   function handleMarkAsKnown() {
     if (!currentList.length || currentIndex < 0) return;
     const knownWord = currentList[currentIndex];
@@ -575,217 +635,174 @@ export default function GermanLearningPage() {
       window.dispatchEvent(new Event('resize'));
     }, 300);
   }
-
   function toggleMeaning() {
     setShowMeaning((prev) => !prev);
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
     }, 300);
   }
-
   const currentWordObj = currentIndex >= 0 && currentIndex < currentList.length ? currentList[currentIndex] : null;
   const categoryNames = Object.keys(categoriesMap);
-  const progressValue = currentIndex;
-  const progressMax = Math.max(0, currentList.length - 1);
+  return (
+    <motion.div variants={fadeUpVariant} className="mb-10 w-full">
+      <h2 className="text-2xl font-bold mb-6 text-center">Practice Session</h2>
+      <p className="text-center text-sm md:text-base text-gray-300 mb-4 leading-relaxed">
+        1) Choose a category · 2) Restart Deck to shuffle · 3) Show Details for more info · 4) Use Next Word or Mark as Known to manage your deck
+      </p>
+      <div className="flex flex-wrap justify-center gap-2 mb-6">
+        {categoryNames.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setSelectedCategory(cat)}
+            className={`px-3 py-1.5 rounded font-medium text-sm transition ${
+              cat === selectedCategory
+                ? 'bg-accent text-white shadow-lg'
+                : 'bg-[#1b2735] text-gray-200 hover:bg-accent hover:text-white'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <button
+          onClick={handleRestart}
+          className="px-4 py-2 rounded-full font-semibold bg-accent text-white hover:bg-accent-dark transition"
+        >
+          Restart Deck
+        </button>
+        <button
+          onClick={resetKnownWords}
+          className="px-4 py-2 rounded-full font-semibold bg-red-600 text-white hover:bg-red-700 transition"
+        >
+          Reset Known Words
+        </button>
+      </div>
+      <div className="bg-[#1b2735] rounded-lg shadow-lg p-6 min-h-[220px]">
+        {currentWordObj ? (
+          <>
+            <motion.h3
+              key={currentWordObj.german}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
+              className="text-xl md:text-2xl font-bold text-center mb-4 text-accent"
+            >
+              {currentWordObj.german}
+            </motion.h3>
+            {showMeaning && (
+              <motion.div
+                key={currentWordObj.english}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeInOut' }}
+                className="mb-6 text-sm md:text-base bg-gray-800 p-4 rounded-md"
+              >
+                <p className="mb-1">
+                  <span className="font-semibold text-accent">Meaning:</span> {currentWordObj.english}
+                </p>
+                {currentWordObj.prateritum && currentWordObj.prateritum !== "N/A" && (
+                  <p className="mb-1">
+                    <span className="font-semibold text-accent">Präteritum:</span> {currentWordObj.prateritum}
+                  </p>
+                )}
+                {currentWordObj.perfekt && currentWordObj.perfekt !== "N/A" && (
+                  <p className="mb-1">
+                    <span className="font-semibold text-accent">Perfekt:</span> {currentWordObj.perfekt}
+                  </p>
+                )}
+                {currentWordObj.example && (
+                  <p className="mb-1">
+                    <span className="font-semibold text-accent">Example:</span> {currentWordObj.example}
+                  </p>
+                )}
+                {currentWordObj.note && (
+                  <p className="mt-1">
+                    <span className="font-semibold text-accent">Note:</span> {currentWordObj.note}
+                  </p>
+                )}
+              </motion.div>
+            )}
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button
+                onClick={toggleMeaning}
+                className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition"
+              >
+                {showMeaning ? 'Hide Details' : 'Show Details'}
+              </button>
+              <button
+                onClick={handleNextWord}
+                className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition"
+              >
+                Next Word
+              </button>
+              <button
+                onClick={handleMarkAsKnown}
+                className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition"
+              >
+                Mark as Known
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="text-center text-gray-200 flex items-center justify-center min-h-[100px]">
+            {currentList.length === 0 ? (
+              <p className="text-lg">All done! No more words in this deck.</p>
+            ) : (
+              <p className="text-lg">No current card. Pick a category or restart the deck.</p>
+            )}
+          </div>
+        )}
+      </div>
+      <div className="mt-6 text-center text-xs text-gray-400">
+        <p className="mb-1">Progress: {currentIndex + 1} / {currentList.length}</p>
+        <progress
+          className="w-full h-3 bg-gray-800 rounded overflow-hidden"
+          value={currentIndex + 1}
+          max={currentList.length}
+        />
+      </div>
+    </motion.div>
+  );
+}
 
+export default function GermanLearningPage() {
+  const [activeTab, setActiveTab] = useState('quiz');
+  const tabs = [
+    { key: 'quiz', label: 'Quiz' },
+    { key: 'grammar', label: 'Grammar' },
+    { key: 'practice', label: 'Practice' }
+  ];
   return (
     <section
       data-scroll-section
-      className="w-full min-h-screen flex flex-col justify-start items-center text-white bg-gradient-to-r from-[#0e1622] to-[#1b2735] p-4"
+      className="w-full min-h-screen flex flex-col items-center text-white bg-gradient-to-r from-[#0e1622] to-[#1b2735] p-4"
     >
-      <motion.div
-        variants={containerVariant}
-        initial="hidden"
-        animate="show"
-        className="max-w-3xl w-full"
-      >
+      <motion.div variants={containerVariant} initial="hidden" animate="show" className="max-w-3xl w-full">
         <motion.h1
           variants={fadeUpVariant}
           className="text-3xl md:text-4xl font-extrabold text-accent mt-8 mb-6 text-center"
         >
-          German Past Tense & Vocabulary
+          German Past Tense & Practice Session
         </motion.h1>
-
-        <motion.div variants={fadeUpVariant} className="mb-10">
-          <h2 className="text-2xl font-bold mb-4 text-center">Quick Tense Quiz</h2>
-          {!showQuizResult ? (
-            <div className="bg-[#1b2735] p-4 rounded-md shadow-md">
-              <p className="text-sm md:text-base font-semibold mb-3">
-                Question {currentQuizIndex + 1} of {quizQuestions.length}
-              </p>
-              <p className="text-sm md:text-base mb-4 text-gray-200">
-                {quizQuestions[currentQuizIndex].question}
-              </p>
-              <div className="flex flex-col gap-2 mb-4">
-                {quizQuestions[currentQuizIndex].options.map((opt, idx) => (
-                  <label key={idx} className="flex items-center cursor-pointer">
-                    <input
-                      type="radio"
-                      className="mr-2"
-                      checked={selectedOptionIndex === idx}
-                      onChange={() => handleQuizOptionSelect(idx)}
-                    />
-                    <span className="text-gray-300 text-sm md:text-base">{opt}</span>
-                  </label>
-                ))}
-              </div>
-              <button
-                onClick={handleQuizSubmit}
-                className="bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-md"
-              >
-                Submit
-              </button>
-            </div>
-          ) : (
-            <div className="bg-[#1b2735] p-4 rounded-md shadow-md text-center">
-              <p className="text-lg font-semibold mb-4">
-                You scored {quizScore} / {quizQuestions.length}
-              </p>
-              <button
-                onClick={handleQuizRestart}
-                className="bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-md"
-              >
-                Restart Quiz
-              </button>
-            </div>
-          )}
-        </motion.div>
-
-        <motion.div variants={fadeUpVariant} className="mb-10">
-          <h2 className="text-2xl font-bold mb-4 text-center">Grammar Overview</h2>
-          <div className="space-y-4">
-            {grammarSections.map((section, idx) => (
-              <div key={idx} className="bg-[#1b2735] p-4 rounded-md shadow-md">
-                <button
-                  onClick={() => toggleSection(idx)}
-                  className="w-full text-left font-semibold text-lg focus:outline-none flex justify-between items-center"
-                >
-                  <span>{section.title}</span>
-                  <span>{openSectionIndex === idx ? "−" : "+"}</span>
-                </button>
-                {openSectionIndex === idx && (
-                  <div className="mt-3 text-sm md:text-base text-gray-200">
-                    {section.content}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div variants={fadeUpVariant} className="mb-10">
-          <h2 className="text-2xl font-bold mb-6 text-center">Vocabulary Practice</h2>
-          <p className="text-center text-sm md:text-base text-gray-300 mb-4 leading-relaxed">
-            1) Choose a category &middot; 2) “Restart” to shuffle &middot; 3) “Show Details” &middot; 4) “Next Word” or “Mark as Known” to remove it from the deck
-          </p>
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
-            {categoryNames.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 rounded font-medium text-sm transition ${
-                  cat === selectedCategory
-                    ? 'bg-accent text-white shadow-lg'
-                    : 'bg-[#1b2735] text-gray-200 hover:bg-accent hover:text-white'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div className="flex justify-center mb-8">
+          {tabs.map((tab) => (
             <button
-              onClick={handleRestart}
-              className="px-4 py-2 rounded-full font-semibold bg-accent text-white hover:bg-accent-dark transition"
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`mx-2 px-4 py-2 rounded-full font-semibold text-sm transition ${
+                activeTab === tab.key
+                  ? 'bg-accent text-white shadow-lg'
+                  : 'bg-[#1b2735] text-gray-200 hover:bg-accent hover:text-white'
+              }`}
             >
-              Restart Deck
+              {tab.label}
             </button>
-            <button
-              onClick={resetKnownWords}
-              className="px-4 py-2 rounded-full font-semibold bg-red-600 text-white hover:bg-red-700 transition"
-            >
-              Reset Known Words
-            </button>
-          </div>
-          <div className="bg-[#1b2735] rounded-lg shadow-lg p-6 min-h-[220px]">
-            {currentWordObj ? (
-              <>
-                <motion.h3
-                  key={currentWordObj.german}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, ease: 'easeInOut' }}
-                  className="text-xl md:text-2xl font-bold text-center mb-4 text-accent"
-                >
-                  {currentWordObj.german}
-                </motion.h3>
-                {showMeaning && (
-                  <motion.div
-                    key={currentWordObj.english}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: 'easeInOut' }}
-                    className="mb-6 text-sm md:text-base bg-gray-800 p-4 rounded-md"
-                  >
-                    <p className="mb-1">
-                      <span className="font-semibold text-accent">Meaning:</span> {currentWordObj.english}
-                    </p>
-                    <p className="mb-1">
-                      <span className="font-semibold text-accent">Präteritum:</span> {currentWordObj.prateritum}
-                    </p>
-                    <p className="mb-1">
-                      <span className="font-semibold text-accent">Perfekt:</span> {currentWordObj.perfekt}
-                    </p>
-                    <p className="mb-1">
-                      <span className="font-semibold text-accent">Example:</span> {currentWordObj.example}
-                    </p>
-                    {currentWordObj.note && (
-                      <p className="mt-1">
-                        <span className="font-semibold text-accent">Note:</span> {currentWordObj.note}
-                      </p>
-                    )}
-                  </motion.div>
-                )}
-                <div className="flex flex-wrap gap-3 justify-center">
-                  <button
-                    onClick={toggleMeaning}
-                    className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition"
-                  >
-                    {showMeaning ? 'Hide Details' : 'Show Details'}
-                  </button>
-                  <button
-                    onClick={handleNextWord}
-                    className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition"
-                  >
-                    Next Word
-                  </button>
-                  <button
-                    onClick={handleMarkAsKnown}
-                    className="px-4 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition"
-                  >
-                    Mark as Known
-                  </button>
-                </div>
-              </>
-            ) : (
-              <div className="text-center text-gray-200 flex items-center justify-center min-h-[100px]">
-                {currentList.length === 0 ? (
-                  <p className="text-lg">All done! No more words in this deck.</p>
-                ) : (
-                  <p className="text-lg">No current card. Pick a category or restart the deck.</p>
-                )}
-              </div>
-            )}
-          </div>
-          <div className="mt-6 text-center text-xs text-gray-400">
-            <p className="mb-1">Progress: {progressValue} / {progressMax}</p>
-            <progress
-              className="w-full h-3 bg-gray-800 rounded overflow-hidden"
-              value={progressValue}
-              max={progressMax}
-            />
-          </div>
-        </motion.div>
+          ))}
+        </div>
+        {activeTab === 'quiz' && <QuizSection />}
+        {activeTab === 'grammar' && <GrammarOverview />}
+        {activeTab === 'practice' && <PracticeSession />}
       </motion.div>
     </section>
   );
