@@ -46,6 +46,10 @@ const Root = () => {
 
   useEffect(() => {
     if (locoScroll.current) {
+      locoScroll.current.scrollTo(0, {
+        duration: 0,
+        disableLerp: true,
+      });
       locoScroll.current.update();
     }
   }, [currentPage]);
