@@ -453,15 +453,28 @@ function QuizSection() {
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
   const [quizScore, setQuizScore] = useState(0);
   const [showQuizResult, setShowQuizResult] = useState(false);
+  const [quizAnswers, setQuizAnswers] = useState([]);
+  useEffect(() => {
+    if (showQuizResult) {
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 100);
+    }
+  }, [showQuizResult]);
   const handleQuizOptionSelect = (idx) => {
     setSelectedOptionIndex(idx);
   };
   const handleQuizSubmit = () => {
     if (selectedOptionIndex === null) return;
-    const isCorrect = selectedOptionIndex === quizQuestions[currentQuizIndex].correctIndex;
+    const currentQuestion = quizQuestions[currentQuizIndex];
+    const isCorrect = selectedOptionIndex === currentQuestion.correctIndex;
     if (isCorrect) {
       setQuizScore((prev) => prev + 1);
     }
+    setQuizAnswers((prev) => [
+      ...prev,
+      { question: currentQuestion.question, options: currentQuestion.options, selected: selectedOptionIndex, correct: currentQuestion.correctIndex }
+    ]);
     setSelectedOptionIndex(null);
     if (currentQuizIndex < quizQuestions.length - 1) {
       setCurrentQuizIndex((prev) => prev + 1);
@@ -474,6 +487,10 @@ function QuizSection() {
     setQuizScore(0);
     setSelectedOptionIndex(null);
     setShowQuizResult(false);
+    setQuizAnswers([]);
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
   };
   return (
     <motion.div variants={fadeUpVariant} className="mb-10 w-full">
@@ -507,16 +524,43 @@ function QuizSection() {
           </button>
         </div>
       ) : (
-        <div className="bg-[#1b2735] p-4 rounded-md shadow-md text-center">
-          <p className="text-lg font-semibold mb-4">
+        <div className="bg-[#1b2735] p-4 rounded-md shadow-md">
+          <p className="text-lg font-semibold mb-4 text-center">
             You scored {quizScore} / {quizQuestions.length}
           </p>
-          <button
-            onClick={handleQuizRestart}
-            className="bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-md"
-          >
-            Restart Quiz
-          </button>
+          <div className="mb-4 space-y-4">
+            {quizAnswers.map((answer, idx) => (
+              <div key={idx} className="p-4 rounded-md bg-gray-800">
+                <p className="font-semibold mb-2">Q{idx + 1}: {answer.question}</p>
+                <ul>
+                  {answer.options.map((opt, optIdx) => {
+                    let classes = "text-sm md:text-base ";
+                    if (optIdx === answer.correct) {
+                      classes += "text-green-400 font-bold";
+                    }
+                    if (optIdx === answer.selected && answer.selected !== answer.correct) {
+                      classes += " text-red-400 font-bold";
+                    }
+                    return (
+                      <li key={optIdx} className={classes}>
+                        {optIdx === answer.selected ? "Your answer: " : ""}
+                        {opt}
+                        {optIdx === answer.correct && " (Correct)"}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <button
+              onClick={handleQuizRestart}
+              className="bg-accent hover:bg-accent-dark text-white font-semibold px-4 py-2 rounded-md"
+            >
+              Restart Quiz
+            </button>
+          </div>
         </div>
       )}
     </motion.div>
