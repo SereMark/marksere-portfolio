@@ -372,15 +372,6 @@ export const verbMatchingData = [
   { verb: "mögen", correct: "Akkusativ" }
 ];
 
-export const scenarioExerciseData = {
-  prompt: "In an office, Basti is looking for his umbrella. What do you say?",
-  expectedKeywords: ["regenschirm", "tisch"],
-  variations: [
-    { prompt: "At a restaurant, your food is delayed. What do you say?", expectedKeywords: ["bestellung", "bitte"] },
-    { prompt: "In a store, you can't find the price tag. What do you ask?", expectedKeywords: ["preis", "tag"] }
-  ]
-};
-
 export const conjunctions = [
   { german: "aber", english: "but", prateritum: "N/A", perfekt: "N/A", example: "Ich möchte kommen, aber ich habe keine Zeit." },
   { german: "als", english: "as/when (in the past)", prateritum: "N/A", perfekt: "N/A", example: "Als ich jung war, wohnte ich in Hamburg." },
