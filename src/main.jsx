@@ -8,7 +8,6 @@ import App from './App';
 const Root = () => {
   const scrollRef = useRef(null);
   const locoScroll = useRef(null);
-
   const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
@@ -16,14 +15,12 @@ const Root = () => {
       locoScroll.current = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
-        lerp: 0.07,
+        lerp: 0.07
       });
-
       const handleResize = () => {
         locoScroll.current.update();
       };
       window.addEventListener('resize', handleResize);
-
       const images = scrollRef.current.querySelectorAll('img');
       const imagePromises = Array.from(images).map((img) => {
         if (img.complete) return Promise.resolve();
@@ -32,11 +29,9 @@ const Root = () => {
           img.onerror = resolve;
         });
       });
-
       Promise.all(imagePromises).then(() => {
         locoScroll.current.update();
       });
-
       return () => {
         window.removeEventListener('resize', handleResize);
         if (locoScroll.current) locoScroll.current.destroy();
@@ -48,7 +43,7 @@ const Root = () => {
     if (locoScroll.current) {
       locoScroll.current.scrollTo(0, {
         duration: 0,
-        disableLerp: true,
+        disableLerp: true
       });
       locoScroll.current.update();
     }
