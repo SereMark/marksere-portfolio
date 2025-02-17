@@ -32,8 +32,13 @@ const Root = () => {
       Promise.all(imagePromises).then(() => {
         locoScroll.current.update();
       });
+      const handleRefreshScroll = () => {
+        locoScroll.current.update();
+      };
+      window.addEventListener('refreshScroll', handleRefreshScroll);
       return () => {
         window.removeEventListener('resize', handleResize);
+        window.removeEventListener('refreshScroll', handleRefreshScroll);
         if (locoScroll.current) locoScroll.current.destroy();
       };
     }
