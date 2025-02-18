@@ -51,26 +51,3 @@ export const posts = [
       github: 'https://github.com/SereMark/ai-experimentation'
     }
   ];
-  
-  export const focusAreas = [
-    {
-      title: 'AI Solutions',
-      icon: '💡',
-      text: 'Designing intelligent software solutions leveraging deep learning techniques, including CNNs and reinforcement learning for decision-making systems.'
-    },
-    {
-      title: 'Robotics Integration',
-      icon: '🤖',
-      text: 'Integrating AI algorithms with robotics to enable dynamic, real-world applications, currently exploring robotics foundations during coursework.'
-    },
-    {
-      title: 'Full-Stack Development',
-      icon: '🌐',
-      text: 'Building modern, scalable applications using .NET, JavaScript, and cloud technologies, with two years of professional experience.'
-    },
-    {
-      title: 'Research and Learning',
-      icon: '🚀',
-      text: 'Exploring advanced machine learning topics, including unsupervised learning, transformers, and Monte Carlo Tree Search for real-world applications.'
-    }
-  ];
