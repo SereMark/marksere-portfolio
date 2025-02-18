@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const grammarSections = [
   {
     title: "1️⃣ Das Perfekt (Present Perfect)",
@@ -7,57 +5,28 @@ export const grammarSections = [
       <>
         <p><strong>Definition:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            The <strong>Perfekt</strong> is the past tense most commonly used in everyday spoken German to describe actions or events that have been completed.
-          </li>
-          <li>
-            It is formed with an auxiliary verb (<strong>haben</strong> or <strong>sein</strong>) plus the past participle (<strong>Partizip II</strong>) of the main verb.
-          </li>
-          <li>
-            <em>Example:</em> Ich habe Deutsch gelernt. (<em>I have learned German.</em>)
-          </li>
-          <li>
-            <strong>Tip:</strong> Although the action is in the past, the Perfekt often has a link to the present moment, making it very common in conversation.
-          </li>
+          <li>The <strong>Perfekt</strong> describes completed actions in spoken German.</li>
+          <li>It uses an auxiliary (<strong>haben</strong> or <strong>sein</strong>) with the past participle (<strong>Partizip II</strong>).</li>
+          <li><em>Example:</em> Ich habe Deutsch gelernt.</li>
+          <li><strong>Tip:</strong> Often connects past actions with the present.</li>
         </ul>
-        <p><strong>Choosing the Auxiliary: "haben" vs. "sein"</strong></p>
+        <p><strong>Choosing the Auxiliary:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            <strong>haben</strong> is used with most verbs, especially those that do not indicate movement or a change in state (e.g., <em>gelernt, gemacht, gehört</em>).
-          </li>
-          <li>
-            <strong>sein</strong> is used with verbs that express motion or a change of state (e.g., <em>gegangen, gefahren, gekommen</em>). Only verbs that show a clear change from one state or location to another use <strong>sein</strong>.
-          </li>
-          <li>
-            <strong>Exceptions:</strong> Some verbs may be context-dependent, so be sure to consider the meaning in each situation.
-          </li>
+          <li><strong>haben</strong> for most verbs; <strong>sein</strong> for verbs showing movement or change.</li>
+          <li>Some verbs may vary by context.</li>
         </ul>
         <p><strong>Formation of the Partizip II:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            <strong>Regular verbs:</strong> Add <code>ge-</code> + verb stem + <code>-(e)t</code> (e.g., <em>lernen → gelernt</em>, <em>machen → gemacht</em>).
-          </li>
-          <li>
-            <strong>Irregular verbs:</strong> Add <code>ge-</code> + modified stem + <code>-en</code> (e.g., <em>schreiben → geschrieben</em>, <em>essen → gegessen</em>). These often have vowel changes.
-          </li>
-          <li>
-            <strong>Separable verbs:</strong> Insert <code>ge-</code> between the prefix and the verb stem (e.g., <em>aufräumen → aufgeräumt</em>).
-          </li>
-          <li>
-            <strong>Inseparable verbs:</strong> Do <em>not</em> add the <code>ge-</code> prefix (e.g., <em>besuchen → besucht</em>, <em>erklären → erklärt</em>).
-          </li>
-          <li>
-            <strong>Verbs ending in -ieren:</strong> Omit the <code>ge-</code> and add <code>-t</code> (e.g., <em>studieren → studiert</em>).
-          </li>
+          <li><strong>Regular verbs:</strong> Add <code>ge-</code> + stem + <code>-(e)t</code>.</li>
+          <li><strong>Irregular verbs:</strong> Often use <code>ge-</code> + modified stem + <code>-en</code>.</li>
+          <li><strong>Separable verbs:</strong> Insert <code>ge-</code> between prefix and stem.</li>
+          <li><strong>Inseparable verbs:</strong> Do not add <code>ge-</code>.</li>
+          <li><strong>Verbs ending in -ieren:</strong> Omit <code>ge-</code>, add <code>-t</code>.</li>
         </ul>
         <p><strong>Additional Considerations:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            Time expressions (like <em>schon</em> or <em>bereits</em>) are often used with the Perfekt to emphasize completion.
-          </li>
-          <li>
-            In regions such as Southern Germany and Austria, the Perfekt is used even in formal written contexts.
-          </li>
+          <li>Time expressions (e.g., <em>schon</em>) emphasize completion.</li>
+          <li>In some regions, the Perfekt is also used in formal writing.</li>
         </ul>
       </>
     )
@@ -68,50 +37,27 @@ export const grammarSections = [
       <>
         <p><strong>Definition:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            The <strong>Präteritum</strong> is primarily used in written German (narratives, literature, or news reports) to describe past events.
-          </li>
-          <li>
-            In everyday conversation, speakers tend to use the Perfekt, except for a few high-frequency verbs.
-          </li>
-          <li>
-            This tense helps create a formal or storytelling tone by distancing the narrative from the present.
-          </li>
+          <li>Used mainly in written language for narrating past events.</li>
+          <li>Conversationally, the Perfekt is more common.</li>
+          <li>Creates a formal or storytelling tone.</li>
         </ul>
         <p><strong>Conjugation Rules:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            <strong>Regular (weak) verbs:</strong> Add endings <code>-te, -test, -te, -ten, -tet, -ten</code> (e.g., <em>lernen → ich lernte, du lerntest, er/sie/es lernte</em>).
-          </li>
-          <li>
-            <strong>Irregular (strong) verbs:</strong> Often involve a stem vowel change and have less predictable endings (e.g., <em>gehen → ich ging, du gingst, er/sie/es ging</em>).
-          </li>
-          <li>
-            <strong>Modal verbs:</strong> Generally lose their umlaut in the Präteritum (e.g., <em>können → ich konnte, du konntest</em>).
-          </li>
-          <li>
-            <strong>Special cases:</strong>
+          <li><strong>Regular verbs:</strong> Add endings like <code>-te, -test, -te, -ten, -tet, -ten</code>.</li>
+          <li><strong>Irregular verbs:</strong> Often change their stem vowel.</li>
+          <li><strong>Modal verbs:</strong> Typically lose their umlaut.</li>
+          <li><strong>Special cases:</strong>
             <ul className="list-disc ml-6 list-inside">
-              <li>
-                <strong>sein:</strong> ich war, du warst, er/sie/es war, wir waren, ihr wart, sie/Sie waren
-              </li>
-              <li>
-                <strong>haben:</strong> ich hatte, du hattest, er/sie/es hatte, wir hatten, ihr hattet, sie/Sie hatten
-              </li>
+              <li><strong>sein:</strong> ich war, du warst, etc.</li>
+              <li><strong>haben:</strong> ich hatte, du hattest, etc.</li>
             </ul>
           </li>
         </ul>
-        <p><strong>When to Use Perfekt vs. Präteritum:</strong></p>
+        <p><strong>When to Use:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            <strong>Everyday spoken language:</strong> Use the Perfekt (e.g., <em>Ich habe gelernt</em>).
-          </li>
-          <li>
-            <strong>Written language and storytelling:</strong> Use the Präteritum (e.g., <em>Ich lernte</em>), especially in narratives.
-          </li>
-          <li>
-            <strong>Note:</strong> Some verbs like <em>sein</em>, <em>haben</em>, and modal verbs often appear in the Präteritum even in conversation.
-          </li>
+          <li>Everyday speech: Perfekt (e.g., Ich habe gelernt).</li>
+          <li>Writing/narratives: Präteritum (e.g., Ich lernte).</li>
+          <li>Some high-frequency verbs appear in the Präteritum even in conversation.</li>
         </ul>
       </>
     )
@@ -120,41 +66,23 @@ export const grammarSections = [
     title: "3️⃣ Strong & Weak Verb Conjugations",
     content: (
       <>
-        <p><strong>Regular (Weak) Verbs (schwache Verben):</strong></p>
+        <p><strong>Regular (Weak) Verbs:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            These verbs maintain a stable stem and use predictable endings across tenses.
-          </li>
-          <li>
-            <em>Examples:</em> <em>lernen → ich lernte</em>; <em>glauben → er glaubte</em>.
-          </li>
-          <li>
-            <strong>Note:</strong> Their regularity makes them easier to learn and recognize.
-          </li>
+          <li>Maintain a stable stem with predictable endings.</li>
+          <li><em>Examples:</em> lernen → ich lernte; glauben → er glaubte.</li>
+          <li>Easier to learn due to their regularity.</li>
         </ul>
-        <p><strong>Irregular (Strong) Verbs (starke Verben):</strong></p>
+        <p><strong>Irregular (Strong) Verbs:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            These verbs often feature a vowel change (called <em>Ablaut</em>) in the stem, resulting in less predictable conjugation patterns.
-          </li>
-          <li>
-            <em>Examples:</em> <em>gehen → ich ging</em>; <em>essen → ich aß</em>; <em>finden → wir fanden</em>.
-          </li>
-          <li>
-            <strong>Tip:</strong> Learning the most common strong verbs helps you recognize their patterns and exceptions.
-          </li>
+          <li>Often show a stem vowel change (Ablaut).</li>
+          <li><em>Examples:</em> gehen → ich ging; essen → ich aß.</li>
+          <li>Learn common ones to recognize patterns and exceptions.</li>
         </ul>
-        <p><strong>Mixed Verbs (Mischverben):</strong></p>
+        <p><strong>Mixed Verbs:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            Mixed verbs combine features of both strong and weak verbs: they take weak endings while undergoing a stem vowel change.
-          </li>
-          <li>
-            <em>Examples:</em> <em>denken → ich dachte</em>; <em>bringen → ich brachte</em>.
-          </li>
-          <li>
-            <strong>Practice:</strong> Extra practice is useful because these verbs don’t follow a single pattern.
-          </li>
+          <li>Combine features of both strong and weak verbs.</li>
+          <li><em>Examples:</em> denken → ich dachte; bringen → ich brachte.</li>
+          <li>Extra practice is advised.</li>
         </ul>
       </>
     )
@@ -163,29 +91,17 @@ export const grammarSections = [
     title: "4️⃣ Separable & Inseparable Prefix Verbs in the Past Tense",
     content: (
       <>
-        <p><strong>Separable Prefix Verbs (Trennbare Verben):</strong></p>
+        <p><strong>Separable Prefix Verbs:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            In the Perfekt, the prefix detaches and is placed at the end of the sentence after the past participle.
-          </li>
-          <li>
-            <em>Examples:</em> <em>aufräumen → Ich habe <strong>aufgeräumt</strong></em>; <em>abholen → Wir haben <strong>abgeholt</strong></em>.
-          </li>
-          <li>
-            <strong>Hint:</strong> Common separable prefixes include <code>auf-, ab-, ein-, mit-</code>.
-          </li>
+          <li>The prefix detaches and is placed at the end after the participle.</li>
+          <li><em>Examples:</em> aufräumen → aufgeräumt; abholen → abgeholt.</li>
+          <li>Common prefixes include <code>auf-, ab-, ein-, mit-</code>.</li>
         </ul>
-        <p><strong>Inseparable Prefix Verbs (Untrennbare Verben):</strong></p>
+        <p><strong>Inseparable Prefix Verbs:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            These verbs do not add the <code>ge-</code> prefix when forming the past participle.
-          </li>
-          <li>
-            <em>Examples:</em> <em>besuchen → Ich habe <strong>besucht</strong></em>; <em>erklären → Sie hat <strong>erklärt</strong></em>.
-          </li>
-          <li>
-            <strong>Common inseparable prefixes:</strong> <code>be-, er-, ver-, ent-, ge-</code> (when part of the root) are typical.
-          </li>
+          <li>Do not add the <code>ge-</code> prefix.</li>
+          <li><em>Examples:</em> besuchen → besucht; erklären → erklärt.</li>
+          <li>Common inseparable prefixes: <code>be-, er-, ver-, ent-, ge-</code> (as part of the root).</li>
         </ul>
       </>
     )
@@ -196,182 +112,38 @@ export const grammarSections = [
       <>
         <p><strong>Definition:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            The <strong>Plusquamperfekt</strong> describes an action that was completed before another past event. It sets the stage by establishing a clear time sequence.
-          </li>
-          <li>
-            It is formed with the simple past form of the auxiliary (<strong>hatte</strong> or <strong>war</strong>) plus the past participle of the main verb.
-          </li>
-          <li>
-            <em>Example:</em> Ich hatte Deutsch gelernt, bevor ich nach Berlin zog. (<em>I had learned German before I moved to Berlin.</em>)
-          </li>
+          <li>Describes an action completed before another past event.</li>
+          <li>Formed with the simple past of the auxiliary (<strong>hatte</strong> or <strong>war</strong>) and the past participle.</li>
+          <li><em>Example:</em> Ich hatte Deutsch gelernt, bevor ich nach Berlin zog.</li>
         </ul>
         <p><strong>Key Points:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            The auxiliary verb is chosen by the same rules as in the Perfekt (based on movement or change of state).
-          </li>
-          <li>
-            Time conjunctions such as <em>bevor</em>, <em>nachdem</em>, or <em>als</em> are often used to clearly sequence events.
-          </li>
-          <li>
-            <strong>Usage:</strong> This tense is particularly useful in narratives to indicate which past event occurred first.
-          </li>
+          <li>The auxiliary is chosen using the same rules as the Perfekt.</li>
+          <li>Time conjunctions (e.g., <em>bevor</em>, <em>nachdem</em>) sequence events clearly.</li>
+          <li>Particularly useful in narratives.</li>
         </ul>
       </>
     )
   },
   {
-    title: "6️⃣ Reflexive Verben im Perfekt (Reflexive Verbs in the Perfect Tense)",
+    title: "6️⃣ Reflexive Verben im Perfekt",
     content: (
       <>
         <p><strong>Definition:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            Reflexive verbs are used when the subject performs an action on itself, requiring a reflexive pronoun (mich, dich, sich, etc.).
-          </li>
-          <li>
-            In the Perfekt, these verbs typically use <strong>haben</strong> as the auxiliary verb.
-          </li>
-          <li>
-            <em>Example:</em> Ich habe mich gefreut. (<em>I was glad / I enjoyed myself.</em>)
-          </li>
+          <li>Used when the subject acts on itself, requiring a reflexive pronoun.</li>
+          <li>Typically uses <strong>haben</strong> as the auxiliary.</li>
+          <li><em>Example:</em> Ich habe mich gefreut.</li>
         </ul>
         <p><strong>Additional Tips:</strong></p>
         <ul className="list-disc list-inside mb-4">
-          <li>
-            Even if the reflexive verb is separable, the reflexive pronoun must always follow the auxiliary verb (e.g., <em>Ich habe mich umgezogen</em>).
-          </li>
-          <li>
-            Do not separate the reflexive pronoun from the main verb in the perfect tense.
-          </li>
-          <li>
-            If used with modal verbs, make sure the structure is correctly maintained.
-          </li>
+          <li>Even with separable reflexive verbs, the pronoun follows the auxiliary.</li>
+          <li>Keep the structure intact when used with modal verbs.</li>
         </ul>
       </>
     )
   }
-];
-
-export const quizQuestions = [
-  {
-    question: "Which auxiliary verb is generally used with verbs indicating motion or a change of state in the Perfekt?",
-    options: ["haben", "sein", "both are possible"],
-    correctIndex: 1,
-    explanation: "Verbs that denote movement or a change in state (e.g., 'gehen', 'kommen') are typically paired with 'sein'."
-  },
-  {
-    question: "Which past tense is predominantly used in everyday spoken German?",
-    options: ["Präteritum", "Perfekt", "Futur"],
-    correctIndex: 1,
-    explanation: "In spoken German, the Perfekt is favored over the Präteritum except for a few high-frequency verbs."
-  },
-  {
-    question: "Choose the correct form for 'I went home' in everyday spoken German:",
-    options: [
-      "Ich bin nach Hause gegangen",
-      "Ich habe nach Hause gegangen",
-      "Ich war nach Hause gegangen"
-    ],
-    correctIndex: 0,
-    explanation: "The correct form is 'Ich bin nach Hause gegangen' because the verb 'gehen' uses 'sein' as its auxiliary."
-  },
-  {
-    question: "Which category of verbs typically drops the umlaut in the Präteritum conjugation?",
-    options: ["Mixed verbs", "Modal verbs", "Separable verbs"],
-    correctIndex: 1,
-    explanation: "Modal verbs generally lose their umlaut when conjugated in the Präteritum."
-  },
-  {
-    question: "What is the correct structure for forming the Plusquamperfekt (Past Perfect)?",
-    options: [
-      "Present auxiliary (haben/sein) + Partizip II",
-      "Simple past form (hatte/war) + Partizip II",
-      "Wurde + Partizip II + haben/sein"
-    ],
-    correctIndex: 1,
-    explanation: "The Plusquamperfekt is formed with the simple past of the auxiliary (hatte/war) plus the past participle."
-  },
-  {
-    question: "Identify the correctly formed reflexive verb in the Perfekt:",
-    options: [
-      "Ich habe mich gefreut",
-      "Ich bin mich gefahren",
-      "Ich habe dich getroffen"
-    ],
-    correctIndex: 0,
-    explanation: "'Ich habe mich gefreut' is correct. Reflexive verbs in the Perfekt always follow the pattern: auxiliary (haben) + reflexive pronoun + Partizip II."
-  },
-  {
-    question: "Which sentence best demonstrates the use of Plusquamperfekt to indicate that one past event occurred before another?",
-    options: [
-      "Ich war müde, als ich joggen ging",
-      "Ich hatte gegessen, bevor ich ins Kino ging",
-      "Ich ging ins Kino, wenn es regnete"
-    ],
-    correctIndex: 1,
-    explanation: "The sentence 'Ich hatte gegessen, bevor ich ins Kino ging' clearly shows that eating occurred before going to the cinema."
-  },
-  {
-    question: "Which of the following verbs always uses the auxiliary 'sein' in the Perfekt due to indicating movement?",
-    options: ["schwimmen", "reden", "machen"],
-    correctIndex: 0,
-    explanation: "The verb 'schwimmen' implies movement and thus typically uses 'sein' in the Perfekt."
-  }
-];
-
-export const alsWennQuestions = [
-  { sentence: "_____ ich 10 Jahre alt war, zog ich um.", options: ["Als", "Wenn"], correct: 0 },
-  { sentence: "_____ es regnet, bleiben wir zuhause.", options: ["Als", "Wenn"], correct: 1 },
-  { sentence: "_____ ich gestern ankam, war es schon dunkel.", options: ["Als", "Wenn"], correct: 0 },
-  { sentence: "_____ du immer so früh aufstehst, kannst du den Bus erwischen.", options: ["Als", "Wenn"], correct: 1 }
-];
-
-export const sentenceReorderData = [
-  { correctOrder: ["weil", "der", "Regen", "heute", "stark", "fällt"] },
-  { correctOrder: ["obwohl", "er", "krank", "ist", "geht", "er", "zur", "Arbeit"] }
-];
-
-export const caseCompletionData = [
-  { sentence: "Er geht ___ Schule.", options: ["in die", "in der"], correct: 0, explanation: "Movement requires the accusative case: 'in die Schule'." },
-  { sentence: "Ich helfe ___ Mann.", options: ["den", "dem"], correct: 1, explanation: "The verb 'helfen' requires the dative case, so it is 'dem Mann'." },
-  { sentence: "Er bringt ___ Ball.", options: ["den", "dem"], correct: 0, explanation: "The direct object of 'bringen' takes the accusative case: 'den Ball'." },
-  { sentence: "Ich gebe ___ Kind ein Geschenk.", options: ["dem", "den"], correct: 0, explanation: "Giving to someone requires the dative case for the indirect object: 'dem Kind'." }
-];
-
-export const prepositionSelectData = [
-  { sentence: "Sie wartet ___ den Bus.", options: ["auf", "an"], correct: 0, explanation: "The verb 'warten' in this context uses the preposition 'auf'." },
-  { sentence: "Er wohnt ___ München.", options: ["in", "bei"], correct: 0, explanation: "Living in a city typically uses the preposition 'in'." },
-  { sentence: "Ich gehe ___ den Supermarkt.", options: ["in den", "im"], correct: 0, explanation: "Movement to a place uses the accusative case, so 'in den Supermarkt' is correct." },
-  { sentence: "Sie bleibt ___ Hause.", options: ["zu", "bei"], correct: 0, explanation: "The common phrase is 'zu Hause', meaning 'at home'." }
-];
-
-export const twoWayPrepositionData = [
-  { sentence: "Ich lege das Buch ___ den Tisch.", correct: "Wohin" },
-  { sentence: "Das Buch liegt ___ dem Tisch.", correct: "Wo" },
-  { sentence: "Sie hängt das Bild ___ die Wand.", correct: "Wohin" },
-  { sentence: "Das Bild hängt ___ der Wand.", correct: "Wo" }
-];
-
-export const verbPairData = [
-  { sentence: "Ich ___ die Flasche auf den Tisch.", options: ["stelle", "steht"], correct: 0, explanation: "Movement requires the active form 'stellen': Ich stelle die Flasche auf den Tisch." },
-  { sentence: "Die Flasche ___ auf dem Tisch.", options: ["steht", "stellt"], correct: 0, explanation: "For a stationary position, the verb 'stehen' is used: Die Flasche steht auf dem Tisch." },
-  { sentence: "Ich ___ die Blume in den Topf.", options: ["setze", "setzt"], correct: 0, explanation: "Movement into a new position requires 'setzen' in the first person: Ich setze die Blume in den Topf." },
-  { sentence: "Die Blume ___ im Topf.", options: ["sitzt", "setzt"], correct: 0, explanation: "For a stationary position, 'sitzen' is used: Die Blume sitzt im Topf." }
-];
-
-export const verbMatchingData = [
-  { verb: "sehen", correct: "Akkusativ" },
-  { verb: "haben", correct: "Akkusativ" },
-  { verb: "lesen", correct: "Akkusativ" },
-  { verb: "helfen", correct: "Dativ" },
-  { verb: "danken", correct: "Dativ" },
-  { verb: "schmecken", correct: "Dativ" },
-  { verb: "antworten", correct: "Dativ" },
-  { verb: "mögen", correct: "Akkusativ" }
-];
-
+]
 export const conjunctions = [
   { german: "aber", english: "but", prateritum: "N/A", perfekt: "N/A", example: "Ich möchte kommen, aber ich habe keine Zeit." },
   { german: "als", english: "as/when (in the past)", prateritum: "N/A", perfekt: "N/A", example: "Als ich jung war, wohnte ich in Hamburg." },
@@ -406,7 +178,6 @@ export const conjunctions = [
   { german: "ehe", english: "before (literary)", prateritum: "N/A", perfekt: "N/A", example: "Ehe wir schlafen gehen, lesen wir noch ein Buch." },
   { german: "indes", english: "while, whereas (literary)", prateritum: "N/A", perfekt: "N/A", example: "Indes sie im Garten arbeiteten, ging die Sonne unter." }
 ]
-
 export const prepositions = [
   { german: "an", english: "at, on", prateritum: "N/A", perfekt: "N/A", example: "Ich warte an der Bushaltestelle." },
   { german: "auf", english: "on, upon", prateritum: "N/A", perfekt: "N/A", example: "Das Buch liegt auf dem Tisch." },
@@ -447,7 +218,6 @@ export const prepositions = [
   { german: "längs", english: "along (literary)", prateritum: "N/A", perfekt: "N/A", example: "Wir wanderten längs des Flusses." },
   { german: "ungeachtet", english: "regardless of", prateritum: "N/A", perfekt: "N/A", example: "Ungeachtet des Wetters gehen wir spazieren." }
 ]
-
 export const adverbs = [
   { german: "bald", english: "soon", prateritum: "N/A", perfekt: "N/A", example: "Ich werde dich bald besuchen." },
   { german: "bereits", english: "already", prateritum: "N/A", perfekt: "N/A", example: "Ich habe das Problem bereits gelöst." },
@@ -501,7 +271,6 @@ export const adverbs = [
   { german: "hin und wieder", english: "now and then", prateritum: "N/A", perfekt: "N/A", example: "Ich gehe hin und wieder ins Theater." },
   { german: "keineswegs", english: "by no means", prateritum: "N/A", perfekt: "N/A", example: "Das ist keineswegs selbstverständlich." }
 ]
-
 export const questions = [
   { german: "wer", english: "who", prateritum: "N/A", perfekt: "N/A", example: "Wer hat dich angerufen?" },
   { german: "was", english: "what", prateritum: "N/A", perfekt: "N/A", example: "Was willst du essen?" },
@@ -529,7 +298,6 @@ export const questions = [
   { german: "von wem", english: "by whom, from whom", prateritum: "N/A", perfekt: "N/A", example: "Von wem ist dieser Brief?" },
   { german: "mit wem", english: "with whom", prateritum: "N/A", perfekt: "N/A", example: "Mit wem gehst du ins Kino?" }
 ]
-
 export const verbs = [
   { german: "sein", english: "to be", prateritum: "war", perfekt: "ist gewesen", example: "Ich war gestern zu Hause. Ich bin immer pünktlich gewesen.", note: "Used both as a main verb and as an auxiliary for verbs indicating movement or a change of state (e.g., Er ist nach Hause gegangen)." },
   { german: "haben", english: "to have", prateritum: "hatte", perfekt: "hat gehabt", example: "Ich hatte viel zu tun. Ich habe genug Arbeit gehabt.", note: "Used as an auxiliary for most verbs that do not indicate movement or change of state." },
@@ -585,24 +353,11 @@ export const verbs = [
   { german: "putzen", english: "to clean", prateritum: "putzte", perfekt: "hat geputzt", example: "Ich putzte das Fenster. Ich habe heute schon das ganze Haus geputzt.", note: "Means to clean or tidy up." },
   { german: "sich erinnern", english: "to remember (reflexive)", prateritum: "erinnerte sich", perfekt: "hat sich erinnert", example: "Ich erinnerte mich daran, den Termin wahrzunehmen. Ich habe mich rechtzeitig erinnert.", note: "A reflexive verb meaning 'to recall' or 'to keep in mind'." }
 ]
-
-export const tenseRules = [
-  { german: "Sein als Hilfsverb", english: "Usage of 'sein' as an auxiliary verb", prateritum: "war", perfekt: "ist gewesen", example: "Ich bin nach Hause gegangen.", note: "Verbs that denote movement or a change of state use 'sein' to form the Perfekt. E.g.: Er ist eingeschlafen." },
-  { german: "Haben als Hilfsverb", english: "Usage of 'haben' as an auxiliary verb", prateritum: "hatte", perfekt: "hat gehabt", example: "Ich habe das Buch gelesen.", note: "Most verbs use 'haben' for the Perfekt, especially those that do not imply movement or change." },
-  { german: "Bildung des Perfekts", english: "Formation of the Perfect Tense", prateritum: "N/A", perfekt: "N/A", example: "Hilfsverb (haben/sein) + Partizip II (z.B. gegangen, gemacht).", note: "The Perfekt is formed with an auxiliary verb and the past participle. The choice of auxiliary depends on the verb’s meaning." },
-  { german: "Bildung des Präteritums", english: "Formation of the Simple Past", prateritum: "N/A", perfekt: "N/A", example: "Regular and irregular forms must be memorized.", note: "The Präteritum is primarily used in written language and requires memorizing both regular and irregular forms." },
-  { german: "Perfekt vs. Präteritum", english: "Usage in Spoken vs. Written Language", prateritum: "N/A", perfekt: "N/A", example: "Ich habe gegessen (spoken) vs. Ich aß (written narrative).", note: "In everyday conversation, the Perfekt is most common; the Präteritum is used in literature and formal writing." },
-  { german: "Plusquamperfekt", english: "Usage of the Past Perfect", prateritum: "hatte/war", perfekt: "N/A", example: "Ich hatte gegessen, bevor ich wegging.", note: "Expresses an action that occurred before another past action." },
-  { german: "Reflexive Verben im Perfekt", english: "Reflexive Verbs in the Perfect Tense", prateritum: "N/A", perfekt: "hat sich ... ge-verb", example: "Ich habe mich geduscht.", note: "Generally, use 'haben' + reflexive pronoun + Partizip II. The reflexive pronoun stays immediately after the auxiliary verb." }
-]
-
 export const categoriesMap = {
   "Conjunctions": conjunctions,
   "Prepositions": prepositions,
   "Adverbs": adverbs,
   "Question Words": questions,
-  "Verbs": verbs,
-  "Tense Rules": tenseRules
+  "Verbs": verbs
 }
-
 export const knownWordsKey = 'knownWordsExtended'
