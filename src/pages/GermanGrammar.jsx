@@ -57,6 +57,7 @@ function GrammarOverview() {
 function PracticeSession() {
   const [category, setCategory] = useState(Object.keys(categoriesMap)[0])
   const [list, setList] = useState([])
+  const [originalCount, setOriginalCount] = useState(0)
   const [idx, setIdx] = useState(0)
   const [show, setShow] = useState(false)
   const [known, setKnown] = useState(new Set())
@@ -74,7 +75,11 @@ function PracticeSession() {
   const load = cat => {
     const raw = categoriesMap[cat] || []
     const filtered = raw.filter(item => !known.has(item.german))
-    setList(shuffle([...filtered])); setIdx(0); setShow(false)
+    const shuffled = shuffle([...filtered])
+    setList(shuffled)
+    setOriginalCount(shuffled.length)
+    setIdx(0)
+    setShow(false)
   }
   useEffect(() => { load(category) }, [category, known])
   useEffect(() => { triggerResize() }, [list, idx, show])
@@ -128,10 +133,10 @@ function PracticeSession() {
           <p className="text-xl">{list.length === 0 ? "All done! No more words." : "No current card. Pick a category or restart deck."}</p>
         </div>}
       </div>
-      {list.length > 0 && (
+      {originalCount > 0 && (
         <div className="mt-4 text-center text-xs sm:text-sm text-gray-400 w-full">
-          <p>Progress: {list.length ? idx + 1 : 0} / {list.length}</p>
-          <progress className="w-full h-2 bg-gray-800 rounded" value={list.length ? idx + 1 : 0} max={list.length} />
+          <p>Progress: {originalCount - list.length} / {originalCount}</p>
+          <progress className="w-full h-2 bg-gray-800 rounded" value={originalCount - list.length} max={originalCount} />
         </div>
       )}
     </motion.div>
