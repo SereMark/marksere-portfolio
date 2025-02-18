@@ -36,21 +36,21 @@ export default ()=>{const [cat,setCat]=useState("All"),cats=["All","AI","Robotic
         <div className="flex flex-col md:flex-row items-center mb-8">
           <img src="assets/profile.jpg" alt="Profile" loading="lazy" className="w-36 h-36 rounded-full border-4 border-accent object-cover mb-4 md:mb-0 md:mr-6"/>
           <div>
-            <p className="mb-4 text-gray-200 leading-relaxed">
-              I'm <strong>Mark Sere</strong>, a Computer Science student specializing in Software Engineering, on an exchange semester at JKU Linz focused on machine learning, robotics, and AI systems.
-            </p>
-            <p className="text-gray-200 leading-relaxed">
-              My passion drives innovation in healthcare and autonomous systems. When not coding, I stay active or tinker with my chess AI.
-            </p>
+          <p className="mb-4 text-gray-200 leading-relaxed">
+            Hi, I'm <strong>Mark Sere</strong>, a Computer Science student specializing in Software Engineering. Currently, I'm on an exchange semester at <strong>JKU Linz</strong>, focusing on <strong>machine learning, robotics, and AI-driven systems</strong>.
+          </p>
+          <p className="text-gray-200 leading-relaxed">
+            I'm passionate about developing AI solutions for <strong>healthcare and autonomous systems</strong>. When I'm not coding, you’ll find me staying active or refining my <strong>chess AI</strong>.
+          </p>
           </div>
         </div>
         <div>
           <h3 className="text-2xl font-bold mb-4 text-accent">Quick Stats</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div><h4 className="text-4xl font-extrabold text-accent">3</h4><p className="text-sm mt-2 text-gray-300">Years</p></div>
-            <div><h4 className="text-4xl font-extrabold text-accent">5</h4><p className="text-sm mt-2 text-gray-300">Projects</p></div>
-            <div><h4 className="text-4xl font-extrabold text-accent">6</h4><p className="text-sm mt-2 text-gray-300">Langs</p></div>
-            <div><h4 className="text-4xl font-extrabold text-accent">5</h4><p className="text-sm mt-2 text-gray-300">Countries</p></div>
+            <div><h4 className="text-4xl font-extrabold text-accent">3</h4><p className="text-sm mt-2 text-gray-300">Years of Experience</p></div>
+            <div><h4 className="text-4xl font-extrabold text-accent">5</h4><p className="text-sm mt-2 text-gray-300">AI & Software Projects</p></div>
+            <div><h4 className="text-4xl font-extrabold text-accent">6</h4><p className="text-sm mt-2 text-gray-300">Programming Languages</p></div>
+            <div><h4 className="text-4xl font-extrabold text-accent">5</h4><p className="text-sm mt-2 text-gray-300">Countries Explored</p></div>
           </div>
         </div>
       </div>
