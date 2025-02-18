@@ -81,7 +81,7 @@ function PracticeSession() {
     setIdx(0)
     setShow(false)
   }
-  useEffect(() => { load(category) }, [category, known])
+  useEffect(() => { load(category) }, [category])
   useEffect(() => { triggerResize() }, [list, idx, show])
   const save = s => localStorage.setItem(knownWordsKey, JSON.stringify([...s]))
   return (
