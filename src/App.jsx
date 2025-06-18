@@ -145,9 +145,9 @@ function NavigationBar() {
 
     // Animate scroll position
     animate(startPosition, targetPosition, {
-      type: "spring",
-      damping: 30,
-      stiffness: 200,
+      type: "tween",
+      duration: 0.7,
+      ease: "easeInOut",
       onUpdate: (latest) => {
         window.scrollTo(0, latest);
       },
