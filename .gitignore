@@ -1,44 +1,65 @@
-# Node.js
-node_modules/
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+pnpm-debug.log*
+lerna-debug.log*
 
-# Vite
-dist/
-.vite/
-*.local
-
-# Tailwind CSS
-*.css.map
-
-# MacOS
-.DS_Store
-
-# Logs
-logs/
-*.log
-*.gz
-
-# Dependency directories
-/.pnp
+# Dependencies
+node_modules
+.pnp
 .pnp.js
 
-# Editor directories and files
-.idea/
-.vscode/
-*.swp
-*.swo
+# Production build
+dist
+dist-ssr
+*.local
 
-# Environment files
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Coverage directories
-coverage/
+# Testing
+coverage
+*.lcov
+.nyc_output
 
-# Build output
-build/
-out/
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Build tools
+.parcel-cache
+.next
+.nuxt
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
