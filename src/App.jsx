@@ -140,7 +140,7 @@ function NavigationBar() {
 
     setTimeout(() => {
       setIsOpen(false);
-    }, 100);
+    }, 200);
   };
 
   return (
