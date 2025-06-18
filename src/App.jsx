@@ -129,6 +129,23 @@ function NavigationBar() {
 
   const navItems = ['Home', 'About', 'Skills', 'Experience', 'Portfolio', 'Blog', 'Contact'];
 
+  // Handler function for smooth scrolling
+  const handleNavClick = (e, targetId) => {
+    // 1. Prevent the default anchor tag behavior
+    e.preventDefault();
+
+    // 2. Find the target element
+    const targetElement = document.getElementById(targetId);
+
+    // 3. Close the mobile menu
+    setIsOpen(false);
+
+    // 4. If the element exists, scroll to it smoothly
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -152,6 +169,7 @@ function NavigationBar() {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
+                onClick={(e) => handleNavClick(e, item.toLowerCase())}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
@@ -186,7 +204,7 @@ function NavigationBar() {
                   key={item}
                   href={`#${item.toLowerCase()}`}
                   whileHover={{ x: 10 }}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, item.toLowerCase())}
                   className="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
                 >
                   {item}
