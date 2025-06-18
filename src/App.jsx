@@ -137,13 +137,14 @@ function NavigationBar() {
     // 2. Find the target element
     const targetElement = document.getElementById(targetId);
 
-    // 3. Close the mobile menu
-    setIsOpen(false);
-
-    // 4. If the element exists, scroll to it smoothly
+    // 3. If the element exists, scroll to it smoothly
+    //    We do this *before* closing the menu to avoid a race condition.
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    // 4. Close the mobile menu *after* initiating the scroll.
+    setIsOpen(false);
   };
 
   return (
@@ -183,6 +184,7 @@ function NavigationBar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-gray-300 hover:text-cyan-400"
+            aria-label="Toggle menu"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -203,7 +205,6 @@ function NavigationBar() {
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  whileHover={{ x: 10 }}
                   onClick={(e) => handleNavClick(e, item.toLowerCase())}
                   className="block py-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
                 >
