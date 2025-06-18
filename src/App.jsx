@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, animate } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp, FaExternalLinkAlt, FaCalendar, FaBars, FaTimes } from 'react-icons/fa';
 import { SiPython, SiJavascript, SiTensorflow, SiPytorch, SiDotnet, SiReact, SiPostgresql } from 'react-icons/si';
 
@@ -129,18 +129,29 @@ function NavigationBar() {
 
   const navItems = ['Home', 'About', 'Skills', 'Experience', 'Portfolio', 'Blog', 'Contact'];
 
-  // Handler function for smooth scrolling
+  // Custom scroll animation handler using Framer Motion's animate
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
+
+    // Close the menu immediately
+    setIsOpen(false);
+
     const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
 
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Calculate the target position
+    const targetPosition = targetElement.offsetTop;
+    const startPosition = window.scrollY;
 
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 200);
+    // Animate scroll position
+    animate(startPosition, targetPosition, {
+      type: "spring",
+      damping: 30,
+      stiffness: 200,
+      onUpdate: (latest) => {
+        window.scrollTo(0, latest);
+      },
+    });
   };
 
   return (
