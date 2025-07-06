@@ -24,14 +24,14 @@ export default defineConfig({
   // Development server configuration
   server: {
     port: 3000,
-    open: true,
+    open: false,
     cors: true,
   },
   
   // Preview server configuration
   preview: {
     port: 4173,
-    open: true,
+    open: false,
   },
   
   // Optimize dependencies
