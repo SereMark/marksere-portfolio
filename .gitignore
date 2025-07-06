@@ -35,12 +35,8 @@ dist-ssr
 .env.test.local
 .env.production.local
 
-# Testing
-coverage
-*.lcov
-.nyc_output
-
 # Temporary files
+package-lock.json
 *.tmp
 *.temp
 .cache
