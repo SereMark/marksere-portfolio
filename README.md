@@ -1,22 +1,62 @@
 # Mark Sere - Personal Portfolio
 
-A modern, responsive portfolio website showcasing my work as an AI Engineer, Robotics Enthusiast, and Full-Stack Developer.
+My personal portfolio website built with React and Tailwind CSS. I'm a Computer Science student at SZTE and this site showcases my projects and experience in AI and full-stack development.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Frontend Framework**: React 18
-- **Styling**: Tailwind CSS 3
-- **Animations**: Framer Motion
-- **Icons**: React Icons
-- **Build Tool**: Vite
-- **Language**: JavaScript (ES6+)
+- React 18 with Vite
+- Tailwind CSS for styling
+- Framer Motion for animations
+- React Icons
+- Deployed on Netlify
 
-## 🤝 Contact
+## Getting Started
 
-- **Email**: seremark056@gmail.com
-- **LinkedIn**: [linkedin.com/in/seremark](https://linkedin.com/in/seremark)
-- **GitHub**: [github.com/SereMark](https://github.com/SereMark)
+Clone the repo and install dependencies:
 
----
+```bash
+git clone https://github.com/SereMark/marksere-portfolio.git
+cd marksere-portfolio
+npm install
+npm run dev
+```
 
-Built with ❤️ by Mark Sere
+The site will be available at `http://localhost:3000`.
+
+## Project Structure
+
+```
+src/
+├── components/     # React components
+├── data/          # Site content and data
+├── hooks/         # Custom React hooks
+├── utils/         # Helper functions and utilities
+├── constants/     # Configuration and theme
+└── styles/        # CSS and styling
+```
+
+## Development
+
+- `npm run dev` - Development server
+- `npm run build` - Production build
+- `npm run preview` - Preview production build
+
+## Features
+
+- Responsive design that works on all devices
+- Smooth animations and transitions
+- Accessible navigation with keyboard support
+- Optimized for performance and SEO
+- Clean, modern design
+
+## Contact
+
+Feel free to reach out if you have any questions or want to collaborate:
+
+- Email: seremark056@gmail.com
+- LinkedIn: [linkedin.com/in/seremark](https://linkedin.com/in/seremark)
+- GitHub: [github.com/SereMark](https://github.com/SereMark)
+
+## License
+
+MIT License - feel free to use this as inspiration for your own portfolio!
