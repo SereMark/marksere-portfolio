@@ -7,7 +7,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 400);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -19,14 +19,19 @@ const ScrollToTop = () => {
     <AnimatePresence>
       {showScrollTop && (
         <motion.button
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, scale: 0, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0, y: 20 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 z-40 touch-target"
+          className="fixed bottom-8 right-8 p-4 glass-panel text-white rounded-full shadow-lg hover:shadow-glow-primary transition-all duration-300 z-40 border border-white/10 hover:border-primary-main/50 hover:-translate-y-1 group"
           aria-label="Scroll to top"
         >
-          <uiIcons.arrowUp />
+          <motion.div
+            animate={{ y: [0, -3, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <uiIcons.arrowUp className="text-xl group-hover:text-primary-main transition-colors" />
+          </motion.div>
         </motion.button>
       )}
     </AnimatePresence>

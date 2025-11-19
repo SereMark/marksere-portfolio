@@ -1,28 +1,5 @@
 import { motion } from 'framer-motion';
-
-const BLOG_POSTS = [
-  {
-    title: "The Future of WebGL in UI Design",
-    excerpt: "exploring how 3D graphics are reshaping user interfaces and creating more immersive web experiences.",
-    date: "2023-10-15",
-    readTime: "5 min read",
-    category: "Design"
-  },
-  {
-    title: "Optimizing React Performance",
-    excerpt: "Deep dive into memoization, code splitting, and rendering optimization techniques for large scale applications.",
-    date: "2023-09-28",
-    readTime: "8 min read",
-    category: "Engineering"
-  },
-  {
-    title: "Building Scalable Systems",
-    excerpt: "Architectural patterns and best practices for designing robust, scalable backend systems.",
-    date: "2023-09-10",
-    readTime: "6 min read",
-    category: "Architecture"
-  }
-];
+import { BLOG_POSTS } from '../data/portfolio';
 
 const BlogCard = ({ post, index }) => {
   return (
@@ -31,16 +8,16 @@ const BlogCard = ({ post, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors cursor-pointer"
+      className="group relative glass-card p-6 rounded-xl hover:border-primary-main/30 hover:shadow-glow-primary transition-all duration-300 cursor-pointer"
     >
       <div className="flex items-center justify-between mb-4 text-xs font-mono text-gray-500">
         <span>{post.date}</span>
-        <span className="px-2 py-1 rounded-full bg-primary-500/10 text-primary-400 border border-primary-500/20">
+        <span className="px-3 py-1 rounded-full bg-primary-main/10 text-primary-light border border-primary-main/20">
           {post.category}
         </span>
       </div>
 
-      <h3 className="text-xl font-bold font-display text-white mb-3 group-hover:text-primary-400 transition-colors">
+      <h3 className="text-xl font-bold font-display text-white mb-3 group-hover:text-primary-main transition-colors">
         {post.title}
       </h3>
 
@@ -48,7 +25,7 @@ const BlogCard = ({ post, index }) => {
         {post.excerpt}
       </p>
 
-      <div className="flex items-center text-xs font-mono text-secondary-400">
+      <div className="flex items-center text-xs font-mono text-text-muted">
         <span>{post.readTime}</span>
         <span className="mx-2">•</span>
         <span className="group-hover:translate-x-1 transition-transform">Read More →</span>
@@ -67,9 +44,9 @@ const Blog = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold font-display mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-display-lg font-bold font-display mb-6">
             <span className="text-white">Latest </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">
+            <span className="text-gradient">
               Insights
             </span>
           </h2>

@@ -6,7 +6,7 @@ const DevEnvironment = () => {
   return (
     <section id="environment" className="py-32 relative overflow-hidden">
       {/* Background Decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-main/5 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
 
       <div className="section-container relative z-10">
         <motion.div
@@ -15,9 +15,9 @@ const DevEnvironment = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold font-display mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-display-lg font-bold font-display mb-6">
             <span className="text-white">Dev </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">
+            <span className="text-gradient">
               Environment
             </span>
           </h2>
@@ -37,12 +37,12 @@ const DevEnvironment = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 hover:border-primary-500/30 transition-all duration-300"
+                className="group relative glass-card p-6 rounded-2xl hover:border-primary-main/30 hover:shadow-glow-primary transition-all duration-300"
               >
                 <div className="mb-6 flex justify-center">
-                  <div className="p-4 rounded-full bg-bg-main border border-white/10 group-hover:border-primary-500/50 transition-colors shadow-lg">
+                  <div className="p-4 rounded-full bg-bg-main border border-white/10 group-hover:border-primary-main/50 group-hover:shadow-glow-primary transition-all duration-300 shadow-lg">
                     {IconComponent && (
-                      <IconComponent className="text-4xl text-gray-400 group-hover:text-primary-400 transition-colors duration-300" />
+                      <IconComponent className="text-4xl text-gray-400 group-hover:text-primary-main transition-colors duration-300" />
                     )}
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const DevEnvironment = () => {
                 <div className="text-center">
                   <h3 className="text-lg font-bold font-display text-white mb-2">{item.name}</h3>
                   <p className="text-sm text-gray-400 mb-4 line-clamp-2">{item.description}</p>
-                  <span className="inline-block px-3 py-1 bg-primary-500/10 text-primary-400 rounded-full text-xs font-mono border border-primary-500/20">
+                  <span className="inline-block px-3 py-1 bg-primary-main/10 text-primary-light rounded-full text-xs font-mono border border-primary-main/20">
                     {item.category}
                   </span>
                 </div>
