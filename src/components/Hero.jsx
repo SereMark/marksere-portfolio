@@ -1,99 +1,107 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '../utils/animations';
 import { useScrollTo } from '../hooks/useScrollTo';
 import { PERSONAL_INFO } from '../data/portfolio';
+
+const ScrambleText = ({ text, className }) => {
+  const [display, setDisplay] = useState(text);
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+  useEffect(() => {
+    let interval;
+    let iteration = 0;
+
+    const scramble = () => {
+      interval = setInterval(() => {
+        setDisplay(
+          text
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return text[index];
+              }
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join("")
+        );
+
+        if (iteration >= text.length) {
+          clearInterval(interval);
+        }
+
+        iteration += 1 / 3;
+      }, 40);
+    };
+
+    scramble();
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <span className={className}>{display}</span>;
+};
 
 const Hero = () => {
   const { scrollToSection } = useScrollTo();
 
-  const handleCTAClick = (section) => {
-    const success = scrollToSection(section);
-    if (!success) {
-      console.warn(`Failed to navigate to ${section}`);
-    }
-  };
-
   return (
-    <section 
-      id="home" 
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white pt-16"
-      aria-label="Hero section"
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="section-container">
+      {/* Decorative Elements */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-[120px] animate-pulse-slow" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary-500/10 rounded-full blur-[150px] animate-pulse-slow" style={{ animationDelay: '2s' }} />
+
+      <div className="section-container relative z-10">
         <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="text-center max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-6xl mx-auto"
         >
-          {/* Badge */}
-          <motion.div
-            variants={fadeInUp}
-            className="mb-6"
-          >
-            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold uppercase tracking-wide">
-              Portfolio
-            </span>
-          </motion.div>
-
           {/* Name */}
-          <motion.h1
-            variants={fadeInUp}
-            className="section-title mb-6 leading-tight"
-          >
-            {PERSONAL_INFO.name}
-          </motion.h1>
+          <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-bold font-display mb-8 tracking-tighter leading-[0.9]">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50 pb-4">
+              {PERSONAL_INFO.name.split(' ')[0]}
+            </span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-accent-cyan to-secondary-400 pb-4">
+              {PERSONAL_INFO.name.split(' ')[1]}
+            </span>
+          </h1>
 
-          {/* Subtitle and Description */}
+          {/* Scramble Title */}
+          <div className="text-xl md:text-2xl lg:text-3xl text-gray-400 mb-16 font-mono h-8 flex justify-center items-center gap-4">
+            <span className="text-primary-500">{'>'}</span>
+            <ScrambleText text={PERSONAL_INFO.title} />
+            <span className="animate-pulse text-primary-500">_</span>
+          </div>
+
+          {/* Buttons */}
           <motion.div
-            variants={fadeInUp}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 space-y-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <p className="font-semibold text-gray-900">
-              {PERSONAL_INFO.title} • {PERSONAL_INFO.subtitle}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-balance">
-              {PERSONAL_INFO.tagline}
-            </p>
-          </motion.div>
-
-          {/* Call to Action Buttons */}
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0"
-          >
-            <motion.button
-              onClick={() => handleCTAClick('experience')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn--primary w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base"
-              aria-label="View my work and experience"
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="group relative px-8 py-4 bg-white text-bg-main font-bold text-lg rounded-full overflow-hidden transition-transform hover:scale-105 duration-300"
             >
-              View My Work
-            </motion.button>
-            
-            <motion.button
-              onClick={() => handleCTAClick('contact')}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn--secondary w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base"
-              aria-label="Get in touch with me"
-            >
-              Get In Touch
-            </motion.button>
-          </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-cyan translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <span className="relative group-hover:text-white transition-colors z-10">
+                View Projects
+              </span>
+            </button>
 
-          {/* Skip to content link for screen readers */}
-          <a
-            href="#about"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
-            onClick={(e) => {
-              e.preventDefault();
-              handleCTAClick('about');
-            }}
-          >
-            Skip to main content
-          </a>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="group px-8 py-4 bg-transparent border border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/5 transition-all hover:border-primary-400/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+            >
+              <span className="group-hover:text-primary-400 transition-colors">
+                Initialize Contact
+              </span>
+            </button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

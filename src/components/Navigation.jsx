@@ -1,156 +1,113 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { uiIcons } from '../utils/icons';
-import { navAnimation, menuAnimation, slideIn } from '../utils/animations';
 import { useScrollspy } from '../hooks/useScrollspy';
 import { useScrollTo } from '../hooks/useScrollTo';
-import { NAVIGATION_ITEMS, ANIMATION_CONFIG } from '../constants/config';
+import { NAVIGATION_ITEMS } from '../constants/config';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navRef = useRef(null);
   const { scrollToSection } = useScrollTo();
   const activeSection = useScrollspy(NAVIGATION_ITEMS);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') setIsOpen(false);
-    };
-
-    const handleClickOutside = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden';
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
     setIsOpen(false);
-    
-    setTimeout(() => {
-      const success = scrollToSection(targetId.toLowerCase());
-      if (!success) {
-        console.warn(`Failed to scroll to section: ${targetId}`);
-      }
-    }, ANIMATION_CONFIG.menuCloseDelay);
+    scrollToSection(targetId.toLowerCase());
   };
 
   return (
-    <motion.nav
-      ref={navRef}
-      initial="hidden"
-      animate="visible"
-      variants={navAnimation}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'nav-backdrop shadow-lg' : 'bg-white/80 backdrop-blur-sm'
-      }`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div className="section-container">
-        <div className="flex justify-between items-center h-16">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gray-900"
-          >
-            <a 
-              href="#home" 
-              onClick={(e) => handleNavClick(e, 'home')}
-              className="focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm"
-              aria-label="Go to homepage"
+    <>
+      {/* Desktop Floating Nav */}
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden lg:flex items-center gap-1 px-2 py-2 rounded-full border transition-all duration-500 ${scrolled
+            ? 'bg-bg-secondary/80 border-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.3)]'
+            : 'bg-transparent border-transparent backdrop-blur-none'
+          }`}
+      >
+        {NAVIGATION_ITEMS.map((item) => {
+          const isActive = activeSection === item.toLowerCase();
+          return (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              onClick={(e) => handleNavClick(e, item)}
+              className="relative px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 group"
             >
-              Mark Sere
-            </a>
-          </motion.div>
-
-          <div className="hidden lg:flex space-x-8" role="menubar">
-            {NAVIGATION_ITEMS.map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={(e) => handleNavClick(e, item)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`nav-link ${
-                  activeSection === item.toLowerCase() ? 'nav-link--active' : ''
-                }`}
-                role="menuitem"
-                aria-current={activeSection === item.toLowerCase() ? 'page' : undefined}
-              >
+              {isActive && (
+                <motion.div
+                  layoutId="active-pill"
+                  className="absolute inset-0 bg-primary-500/10 border border-primary-500/30 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              )}
+              <span className={`relative z-10 transition-colors duration-300 ${isActive ? 'text-primary-400' : 'text-gray-400 group-hover:text-white'
+                }`}>
                 {item}
-              </motion.a>
-            ))}
-          </div>
+              </span>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden touch-target text-gray-700 hover:text-blue-600 p-2 z-50 relative focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-lg"
-            aria-label={isOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-          >
-            <motion.div
-              animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              {isOpen ? <uiIcons.times size={20} /> : <uiIcons.bars size={20} />}
-            </motion.div>
-          </button>
-        </div>
+              {/* Hover Glow */}
+              {!isActive && (
+                <span className="absolute inset-0 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              )}
+            </a>
+          );
+        })}
+      </motion.nav>
+
+      {/* Mobile Nav Toggle */}
+      <div className="fixed top-6 right-6 z-50 lg:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="relative p-3 rounded-full bg-bg-secondary/80 backdrop-blur-md border border-white/10 text-white shadow-lg overflow-hidden group"
+        >
+          <div className="absolute inset-0 bg-primary-500/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          <div className="relative z-10">
+            {isOpen ? <uiIcons.times size={24} /> : <uiIcons.bars size={24} />}
+          </div>
+        </button>
       </div>
 
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            id="mobile-menu"
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={menuAnimation}
-            className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
-            role="menu"
-            aria-orientation="vertical"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="fixed inset-0 z-40 bg-bg-main/95 backdrop-blur-xl flex items-center justify-center lg:hidden"
           >
-            <div className="px-4 sm:px-6 py-4 space-y-2">
-              {NAVIGATION_ITEMS.map((item, index) => (
+            {/* Background Decoration */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-500/10 rounded-full blur-[100px]" />
+              <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary-500/10 rounded-full blur-[100px]" />
+            </div>
+
+            <div className="flex flex-col items-center gap-8 relative z-10">
+              {NAVIGATION_ITEMS.map((item, i) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
                   onClick={(e) => handleNavClick(e, item)}
-                  variants={slideIn}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: index * ANIMATION_CONFIG.staggerDelay }}
-                  className={`block py-3 px-2 rounded-lg transition-all duration-200 font-medium touch-target ${
-                    activeSection === item.toLowerCase() 
-                      ? 'text-blue-600 font-semibold bg-blue-50' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                  role="menuitem"
-                  tabIndex={0}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ delay: i * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className={`text-4xl font-display font-bold tracking-tight transition-colors duration-300 ${activeSection === item.toLowerCase()
+                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400'
+                      : 'text-white/50 hover:text-white'
+                    }`}
                 >
                   {item}
                 </motion.a>
@@ -159,7 +116,7 @@ const Navigation = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   );
 };
 

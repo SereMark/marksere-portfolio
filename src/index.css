@@ -1,1 +1,69 @@
 @import './styles/index.css';
+
+@layer base {
+  :root {
+    --color-bg-main: #050505;
+    --color-accent-cyan: #00E5FF;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  body {
+    @apply bg-bg-main text-white overflow-x-hidden antialiased;
+    cursor: none;
+    /* Custom cursor */
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.6);
+}
+
+::selection {
+  background: rgba(0, 229, 255, 0.2);
+  color: #00E5FF;
+}
+
+/* Utility classes for glassmorphism */
+.glass-panel {
+  @apply bg-bg-card backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-accent-purple to-accent-pink;
+}

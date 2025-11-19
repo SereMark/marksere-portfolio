@@ -1,73 +1,85 @@
 import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '../utils/animations';
-import { uiIcons } from '../utils/icons';
-import { BLOG_POSTS } from '../data/portfolio';
+
+const BLOG_POSTS = [
+  {
+    title: "The Future of WebGL in UI Design",
+    excerpt: "exploring how 3D graphics are reshaping user interfaces and creating more immersive web experiences.",
+    date: "2023-10-15",
+    readTime: "5 min read",
+    category: "Design"
+  },
+  {
+    title: "Optimizing React Performance",
+    excerpt: "Deep dive into memoization, code splitting, and rendering optimization techniques for large scale applications.",
+    date: "2023-09-28",
+    readTime: "8 min read",
+    category: "Engineering"
+  },
+  {
+    title: "Building Scalable Systems",
+    excerpt: "Architectural patterns and best practices for designing robust, scalable backend systems.",
+    date: "2023-09-10",
+    readTime: "6 min read",
+    category: "Architecture"
+  }
+];
+
+const BlogCard = ({ post, index }) => {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors cursor-pointer"
+    >
+      <div className="flex items-center justify-between mb-4 text-xs font-mono text-gray-500">
+        <span>{post.date}</span>
+        <span className="px-2 py-1 rounded-full bg-primary-500/10 text-primary-400 border border-primary-500/20">
+          {post.category}
+        </span>
+      </div>
+
+      <h3 className="text-xl font-bold font-display text-white mb-3 group-hover:text-primary-400 transition-colors">
+        {post.title}
+      </h3>
+
+      <p className="text-gray-400 text-sm leading-relaxed mb-4">
+        {post.excerpt}
+      </p>
+
+      <div className="flex items-center text-xs font-mono text-secondary-400">
+        <span>{post.readTime}</span>
+        <span className="mx-2">•</span>
+        <span className="group-hover:translate-x-1 transition-transform">Read More →</span>
+      </div>
+    </motion.article>
+  );
+};
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="blog" className="py-32 relative">
+      <div className="section-container">
         <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Latest Articles
+          <h2 className="text-4xl md:text-6xl font-bold font-display mb-6">
+            <span className="text-white">Latest </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">
+              Insights
+            </span>
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto rounded" />
         </motion.div>
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
-        >
-          {BLOG_POSTS.map((post) => (
-            <motion.article
-              key={post.id}
-              variants={fadeInUp}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className={`group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 relative ${
-                post.isComingSoon ? 'cursor-default' : 'cursor-pointer'
-              }`}
-            >
-              {post.isComingSoon && (
-                <div className="absolute inset-0 bg-white/90 backdrop-blur-sm z-10 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-blue-600 text-sm font-medium mb-1">Coming Soon</div>
-                    <div className="w-8 h-0.5 bg-blue-600 mx-auto opacity-60" />
-                  </div>
-                </div>
-              )}
-              
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative">
-                <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm text-white font-medium">
-                    {post.category}
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-4 sm:p-6 space-y-3">
-                <div className="flex items-center gap-4 text-sm text-gray-600">
-                  <span className="flex items-center gap-1">
-                    <uiIcons.calendar /> {post.date}
-                  </span>
-                  <span>{post.readTime}</span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
-                  {post.title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{post.excerpt}</p>
-              </div>
-            </motion.article>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {BLOG_POSTS.map((post, index) => (
+            <BlogCard key={index} post={post} index={index} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
