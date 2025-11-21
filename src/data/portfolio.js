@@ -1,8 +1,21 @@
+/**
+ * @fileoverview Portfolio content data
+ * Central data source for all portfolio content including projects, blog posts,
+ * work experience, skills, and personal information
+ */
+
+/**
+ * Personal information and profile data
+ */
 export const PERSONAL_INFO = {
   name: 'Mark Sere',
   title: 'Computer Science Student',
   subtitle: 'AI & Full-Stack Developer',
   tagline: 'Building practical solutions with modern technologies',
+  location: 'Hungary',
+  experience: '2+',
+  projects: '15+',
+  clients: '5+',
   bio: [
     "Hi! I'm Mark, a Computer Science student at SZTE TTIK in Szeged. I had an amazing Erasmus semester at JKU Linz, which broadened my perspective on technology and problem-solving.",
     "I work with machine learning, full-stack development, and enjoy building practical solutions. Currently focused on AI projects and expanding my skills in modern development practices."
@@ -21,6 +34,9 @@ export const PERSONAL_INFO = {
   ]
 };
 
+/**
+ * Portfolio projects showcase
+ */
 export const PROJECTS = [
   {
     id: 1,
@@ -29,9 +45,9 @@ export const PROJECTS = [
     category: "AI",
     description: "An end-to-end framework combining neural networks with Monte Carlo Tree Search for strategic gameplay.",
     features: [
-      "Neural Network Evaluation", 
-      "MCTS Integration", 
-      "Self-Play Training", 
+      "Neural Network Evaluation",
+      "MCTS Integration",
+      "Self-Play Training",
       "ELO 2400+ Performance"
     ],
     tech: ["Python", "PyTorch", "Optuna", "Chess.py"],
@@ -46,9 +62,9 @@ export const PROJECTS = [
     category: "AI",
     description: "Real-time object detection and tracking system for autonomous robot navigation.",
     features: [
-      "YOLO Integration", 
-      "3D Pose Estimation", 
-      "Multi-Object Tracking", 
+      "YOLO Integration",
+      "3D Pose Estimation",
+      "Multi-Object Tracking",
       "ROS2 Compatible"
     ],
     tech: ["Python", "PyTorch", "OpenCV", "ROS2"],
@@ -64,9 +80,9 @@ export const PROJECTS = [
     category: "Software",
     description: "Full-stack medical data analysis platform with predictive modeling capabilities.",
     features: [
-      "Patient Risk Prediction", 
-      "Real-time Dashboards", 
-      "HIPAA Compliant", 
+      "Patient Risk Prediction",
+      "Real-time Dashboards",
+      "HIPAA Compliant",
       "RESTful API"
     ],
     tech: ["C#", ".NET Core", "React", "SQL Server"],
@@ -77,6 +93,9 @@ export const PROJECTS = [
   }
 ];
 
+/**
+ * Blog posts and articles
+ */
 export const BLOG_POSTS = [
   {
     id: 1,
@@ -113,6 +132,9 @@ export const BLOG_POSTS = [
   }
 ];
 
+/**
+ * Professional work experience
+ */
 export const EXPERIENCES = [
   {
     id: 1,
@@ -146,6 +168,9 @@ export const EXPERIENCES = [
   }
 ];
 
+/**
+ * Technical skills with proficiency levels
+ */
 export const SKILLS = [
   { name: "Python", level: 90 },
   { name: "C#", level: 85 },
@@ -157,31 +182,40 @@ export const SKILLS = [
   { name: "Git", level: 85 }
 ];
 
+/**
+ * Development environment and tools
+ */
 export const DEV_ENVIRONMENT = [
-  { 
-    name: "Arch Linux", 
+  {
+    name: "Arch Linux",
     description: "I use Arch, BTW 😉",
     category: "OS"
   },
-  { 
-    name: "Neovim", 
+  {
+    name: "Neovim",
     description: "Terminal-based editing",
     category: "Editor"
   },
-  { 
-    name: "VS Code", 
+  {
+    name: "VS Code",
     description: "For larger projects",
     category: "Editor"
   },
-  { 
-    name: "Docker", 
+  {
+    name: "Docker",
     description: "Containerization",
     category: "Tools"
   }
 ];
 
+/**
+ * Available project filter categories
+ */
 export const PROJECT_CATEGORIES = ['All', 'AI', 'Software'];
 
+/**
+ * Filters projects by category
+ */
 export const getProjectsByCategory = (category) => {
   if (category === 'All') return PROJECTS;
   return PROJECTS.filter(project => project.category === category);

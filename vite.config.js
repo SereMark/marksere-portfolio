@@ -4,7 +4,12 @@ import react from '@vitejs/plugin-react-swc';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+
   // Build optimizations
   build: {
     target: 'esnext',
@@ -20,20 +25,20 @@ export default defineConfig({
       },
     },
   },
-  
+
   // Development server configuration
   server: {
     port: 3000,
     open: false,
     cors: true,
   },
-  
+
   // Preview server configuration
   preview: {
     port: 4173,
     open: false,
   },
-  
+
   // Optimize dependencies
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'react-icons'],

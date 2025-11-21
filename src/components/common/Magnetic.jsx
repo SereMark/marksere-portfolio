@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 export default function Magnetic({ children, className = "" }) {
     const ref = useRef(null);
@@ -32,3 +33,8 @@ export default function Magnetic({ children, className = "" }) {
         </motion.div>
     );
 }
+
+Magnetic.propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+};

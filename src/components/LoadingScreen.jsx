@@ -1,48 +1,52 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const LoadingScreen = () => {
-  return (
-    <div className="fixed inset-0 bg-bg-main flex items-center justify-center z-50">
-      {/* Background decorative blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-main/20 rounded-full blur-[120px] animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-main/20 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: '1s' }} />
+  const [progress, setProgress] = useState(0);
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="text-center relative z-10"
-      >
-        {/* Sophisticated spinner with gradient */}
-        <div className="relative w-20 h-20 mx-auto mb-8">
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + Math.random() * 10;
+      });
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="fixed inset-0 bg-bg-main flex items-center justify-center z-50 font-mono">
+      <div className="w-64">
+        <div className="flex justify-between text-xs text-primary-main mb-2 uppercase tracking-widest">
+          <span>System Boot</span>
+          <span>{Math.min(100, Math.floor(progress))}%</span>
+        </div>
+
+        <div className="h-1 bg-white/10 rounded-full overflow-hidden">
           <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary-main border-r-secondary-main"
-          />
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-2 rounded-full border-4 border-transparent border-b-primary-light border-l-secondary-light opacity-50"
+            className="h-full bg-primary-main shadow-[0_0_10px_rgba(0,229,255,0.5)]"
+            style={{ width: `${progress}%` }}
           />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          <h2 className="text-2xl font-display font-bold text-white mb-2">
-            Mark Sere
-          </h2>
-          <p className="text-text-secondary text-sm font-mono">
-            Initializing Portfolio<motion.span
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >...</motion.span>
-          </p>
-        </motion.div>
-      </motion.div>
+        <div className="mt-4 space-y-1 text-[10px] text-gray-500">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+            &gt; Initializing core modules...
+          </motion.div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+            &gt; Loading assets...
+          </motion.div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
+            &gt; Establishing secure connection...
+          </motion.div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }} className="text-primary-main">
+            &gt; Access Granted.
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
